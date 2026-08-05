@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --color-bg: #FFFFFF;
+  --color-text: #000000;
+  --color-text-secondary: #5E5E5E;
+  --color-border: #EAEAEA;
+  --color-divider: #F4F4F4;
+  --color-dark-bg: #0A0A0A;
+  --color-dark-text: #FFFFFF;
+  --color-dark-text-secondary: #A0A0A0;
+  --color-dark-border: #262626;
+
+  /* Fonts */
+  --font-display: 'Avenir Black', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Avenir Light', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Type scale */
+  --fs-hero: clamp(2.125rem, 5.5vw, 5.5rem);
+  --fs-h2: clamp(1.75rem, 3.4vw, 3rem);
+  --fs-h3: clamp(1.25rem, 1.6vw, 1.5rem);
+  --fs-body-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-small: 0.9375rem;
+  --fs-label: 0.8125rem;
+
+  /* Spacing */
+  --space-section: clamp(4rem, 9vw, 8rem);
+  --space-section-sm: clamp(2.5rem, 5vw, 4.5rem);
+  --container-max: 1280px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+
+  /* Layout */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --nav-height: 84px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.4s;
+  --dur-slow: 0.7s;
+}

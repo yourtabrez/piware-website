@@ -1,0 +1,35 @@
+@media (max-width: 899px) {
+  .hero__actions .btn--ghost {
+    order: 2;
+  }
+}
+
+@media (max-width: 639px) {
+  .cap-grid,
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tag:not(:last-child)::after {
+    margin-left: 0.9rem;
+  }
+
+  .hero__tags {
+    gap: 0.5rem 1rem;
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 899px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
