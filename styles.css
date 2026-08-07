@@ -536,10 +536,14 @@ section {
   transition: background var(--dur-med) var(--ease), border-color var(--dur-med) var(--ease);
 }
 
-.navbar.is-scrolled,
-.navbar.is-open {
+.navbar.is-scrolled {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
+  border-bottom-color: var(--color-border);
+}
+
+.navbar.is-open {
+  background: rgba(255, 255, 255, 0.92);
   border-bottom-color: var(--color-border);
 }
 
