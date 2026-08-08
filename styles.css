@@ -542,8 +542,14 @@ section {
   border-bottom-color: var(--color-border);
 }
 
+/* Deliberately no backdrop-filter here: backdrop-filter creates a new
+   containing block for position:fixed descendants, which broke the
+   full-screen .navbar__mobile overlay's top/bottom offsets when this
+   class and is-open were combined on the same element. The mobile
+   overlay already has its own solid background, so blur isn't needed
+   while it's open. */
 .navbar.is-open {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.98);
   border-bottom-color: var(--color-border);
 }
 
@@ -651,12 +657,14 @@ section {
 
 .navbar__mobile {
   position: fixed;
-  z-index: 99;
+  z-index: 150;
   top: var(--nav-height);
   left: 0;
   right: 0;
   bottom: 0;
   background: var(--color-bg);
+  background-color: #FFFFFF;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding: 2rem var(--container-pad);
