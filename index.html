@@ -17,6 +17,11 @@
 
     <link rel="icon" href="favicon/favicon.png">
 
+    <!-- Preload critical, above-the-fold assets -->
+    <link rel="preload" as="image" href="assets/images/hero.webp" type="image/webp">
+    <link rel="preload" as="font" href="assets/fonts/Avenir-Black.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/Avenir-Light.woff2" type="font/woff2" crossorigin>
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -31,7 +36,7 @@
         <div class="container navbar__inner">
 
             <a href="#" class="navbar__logo">
-                <img src="assets/images/logo/TPB.png" alt="Piware Engineering">
+                <img src="assets/images/logo/TPB.png" alt="Piware Engineering" width="256" height="256" decoding="async">
                 <span class="navbar__logo-text">Piware</span>
             </a>
 
@@ -73,21 +78,21 @@
     <section class="hero">
         <div class="container hero__grid">
 
-            <div class="hero-content reveal">
-                <span class="eyebrow">End-to-End Product Engineering Studio</span>
+            <div class="hero-content">
+                <span class="eyebrow reveal">End-to-End Product Engineering Studio</span>
 
-                <h1 class="h1">
+                <h1 class="h1 reveal">
                     From Idea to Shipped Hardware.<br>
                     Without the Guesswork.
                 </h1>
 
-                <p class="body-lg">
+                <p class="body-lg reveal">
                     Piware designs and manufactures production-ready electronics for startups
                     and OEMs — hardware, firmware, and mechanical, engineered by the same team
                     that ships it.
                 </p>
 
-                <div class="hero__tags">
+                <div class="hero__tags reveal">
                     <span class="tag">Hardware</span>
                     <span class="tag">PCB</span>
                     <span class="tag">Firmware</span>
@@ -97,7 +102,7 @@
                     <span class="tag">Manufacturing</span>
                 </div>
 
-                <div class="hero__actions">
+                <div class="hero__actions reveal">
                     <a href="https://calendly.com/piwareengineering" target="_blank" rel="noopener" class="btn btn--primary">
                         Start Your Project
                     </a>
@@ -109,7 +114,10 @@
             </div>
 
             <div class="hero__media reveal">
-                <img src="assets/images/hero.png" alt="Close-up of a Piware Engineering multilayer PCB, black solder mask with embedded microcontroller">
+                <picture>
+                    <source srcset="assets/images/hero.png" type="image/png">
+                    <img src="assets/images/hero.png" alt="Close-up of a Piware Engineering multilayer PCB, black solder mask with embedded microcontroller" width="1402" height="1122" fetchpriority="high" decoding="async">
+                </picture>
             </div>
 
         </div>
@@ -123,26 +131,26 @@
     <section class="trust">
         <div class="container trust__grid">
 
-            <div class="trust__stat">
-                <div class="stat-num">25+</div>
+            <div class="trust__stat reveal">
+                <div class="stat-num" data-count-to="25" data-suffix="+">0+</div>
                 <p class="text-small">PCB Designs</p>
             </div>
             <span class="trust__divider"></span>
 
-            <div class="trust__stat">
-                <div class="stat-num">15+</div>
+            <div class="trust__stat reveal">
+                <div class="stat-num" data-count-to="15" data-suffix="+">0+</div>
                 <p class="text-small">Products Developed</p>
             </div>
             <span class="trust__divider"></span>
 
-            <div class="trust__stat">
-                <div class="stat-num">8+</div>
+            <div class="trust__stat reveal">
+                <div class="stat-num" data-count-to="8" data-suffix="+">0+</div>
                 <p class="text-small">Technology Domains</p>
             </div>
             <span class="trust__divider"></span>
 
-            <div class="trust__stat">
-                <div class="stat-num">98%</div>
+            <div class="trust__stat reveal">
+                <div class="stat-num" data-count-to="98" data-suffix="%">0%</div>
                 <p class="text-small">On-Time Delivery</p>
             </div>
 
@@ -241,7 +249,10 @@
         <div class="container proto__grid">
 
             <div class="proto__media reveal media-zoom">
-                <img src="assets/images/proto.png" alt="Piware Engineering product enclosure with internal PCB assembly, matte black housing">
+                <picture>
+                    <source srcset="assets/images/proto.png" type="image/png">
+                    <img src="assets/images/proto.png" alt="Piware Engineering product enclosure with internal PCB assembly, matte black housing" width="1402" height="1122" loading="lazy" decoding="async">
+                </picture>
             </div>
 
             <div class="proto__content reveal">
@@ -255,7 +266,7 @@
                             <div class="icon-frame">P</div>
                             <div class="timeline-v__connector"></div>
                         </div>
-                        <div class="timeline-card">
+                        <div class="timeline-card reveal">
                             <div>
                                 <strong>POC — Proof of Concept</strong>
                                 <p>15–20 Days · 5–6 Units</p>
@@ -268,7 +279,7 @@
                             <div class="icon-frame">E</div>
                             <div class="timeline-v__connector"></div>
                         </div>
-                        <div class="timeline-card">
+                        <div class="timeline-card reveal">
                             <div>
                                 <strong>EVT — Engineering Validation</strong>
                                 <p>15–20 Days · 15–20 Units</p>
@@ -281,7 +292,7 @@
                             <div class="icon-frame">D</div>
                             <div class="timeline-v__connector"></div>
                         </div>
-                        <div class="timeline-card">
+                        <div class="timeline-card reveal">
                             <div>
                                 <strong>DVT — Design Validation</strong>
                                 <p>20–25 Days · Batch upto 200 Units</p>
@@ -294,7 +305,7 @@
                             <div class="icon-frame">V</div>
                             <div class="timeline-v__connector"></div>
                         </div>
-                        <div class="timeline-card">
+                        <div class="timeline-card reveal">
                             <div>
                                 <strong>PVT — Prod. Validation</strong>
                                 <p>15–20 Days · Batch upto 500 Units</p>
@@ -306,7 +317,7 @@
                         <div class="timeline-v__rail">
                             <div class="icon-frame">M</div>
                         </div>
-                        <div class="timeline-card">
+                        <div class="timeline-card reveal">
                             <div>
                                 <strong>MP — Mass Production</strong>
                                 <p>Upto 30 Days · Batch upto 1000+ Units</p>
@@ -573,9 +584,9 @@
             <div class="tech-stack__group reveal">
                 <span class="tech-stack__label">Design & Mechanical</span>
                 <div class="tech-stack__row">
-                    <div class="tech-chip"><img src="favicon/Altium_Logo.svg.webp" alt="Altium Designer"></div>
+                    <div class="tech-chip"><img src="favicon/Altium_Logo.svg.webp" alt="Altium Designer" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--boost"><img src="favicon/kicad.svg" alt="KiCad"></div>
-                    <div class="tech-chip"><img src="favicon/Cadence-Logo.svg.webp" alt="Cadence"></div>
+                    <div class="tech-chip"><img src="favicon/Cadence-Logo.svg.webp" alt="Cadence" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--boost"><img src="favicon/solidworks.svg" alt="SolidWorks"></div>
                     <div class="tech-chip tech-chip--boost"><img src="favicon/Autodesk_Logo_2021.svg.webp" alt="Autodesk"></div>
                 </div>
@@ -584,10 +595,10 @@
             <div class="tech-stack__group reveal">
                 <span class="tech-stack__label">Microcontrollers Microprocessors & SoC</span>
                 <div class="tech-stack__row">
-                    <div class="tech-chip"><img src="favicon/Espressif_Logo.svg.webp" alt="Espressif"></div>
-                    <div class="tech-chip"><img src="favicon/st-logo-blue.svg" alt="STMicroelectronics"></div>
-                    <div class="tech-chip"><img src="favicon/1280px-NXP_Semiconductors_logo_2023.svg.webp" alt="NXP"></div>
-                    <div class="tech-chip"><img src="favicon/microchip.avif" alt="Microchip"></div>
+                    <div class="tech-chip"><img src="favicon/Espressif_Logo.svg.webp" alt="Espressif" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/st-logo-blue.svg" alt="STMicroelectronics" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/1280px-NXP_Semiconductors_logo_2023.svg.webp" alt="NXP" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/microchip.avif" alt="Microchip" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--shrink"><img src="favicon/arm_brand_logo_guidelines_300x175px_01.png" alt="ARM"></div>
                     <div class="tech-chip tech-chip--shrink"><img src="favicon/amd-header-logo.svg" alt="AMD"></div>
                     <div class="tech-chip tech-chip--boost"><img src="favicon/raspberry-logo-raspberry-pi-svgrepo-com.svg" alt="Raspberry Pi"></div>
@@ -597,11 +608,11 @@
             <div class="tech-stack__group reveal">
                 <span class="tech-stack__label">FPGA, Analog & Power</span>
                 <div class="tech-stack__row">
-                    <div class="tech-chip"><img src="favicon/Xilinx_logo.webp" alt="Xilinx"></div>
-                    <div class="tech-chip"><img src="favicon/altera-logo.png" alt="Altera"></div>
-                    <div class="tech-chip"><img src="favicon/Texas_Instruments_logo_2024.svg.webp" alt="Texas Instruments"></div>
+                    <div class="tech-chip"><img src="favicon/Xilinx_logo.webp" alt="Xilinx" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/altera-logo.png" alt="Altera" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/Texas_Instruments_logo_2024.svg.webp" alt="Texas Instruments" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--shrink"><img src="favicon/analog-devices-1-logo-png-transparent.png" alt="Analog Devices"></div>
-                    <div class="tech-chip"><img src="favicon/Infineon_logo.svg" alt="Infineon"></div>
+                    <div class="tech-chip"><img src="favicon/Infineon_logo.svg" alt="Infineon" loading="lazy" decoding="async"></div>
                 </div>
             </div>
 
@@ -610,7 +621,7 @@
                 <div class="tech-stack__row">
                     <div class="tech-chip tech-chip--text"><span>FreeRTOS</span></div>
                     <div class="tech-chip tech-chip--text"><span>Zephyr</span></div>
-                    <div class="tech-chip"><img src="favicon/linux-embedded.png" alt="Embedded Linux"></div>
+                    <div class="tech-chip"><img src="favicon/linux-embedded.png" alt="Embedded Linux" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--shrink"><img src="favicon/YoctoProject_Logo_RGB_White_small.svg" alt="Yocto Project"></div>
                     <div class="tech-chip tech-chip--boost"><img src="favicon/buildroot-logo.png" alt="Buildroot"></div>
                 </div>
@@ -620,10 +631,10 @@
                 <span class="tech-stack__label">Development Tools</span>
                 <div class="tech-stack__row">
                     <div class="tech-chip tech-chip--boost-lg"><img src="favicon/Esp-idf-logo.png" alt="ESP-IDF"></div>
-                    <div class="tech-chip"><img src="favicon/PlatformIO_logo.svg.webp" alt="PlatformIO"></div>
-                    <div class="tech-chip"><img src="favicon/mplab-xide-transparent-background.avif" alt="MPLAB X IDE"></div>
-                    <div class="tech-chip"><img src="favicon/STM32CubeMX.avif" alt="STM32CubeMX"></div>
-                    <div class="tech-chip"><img src="favicon/VS-code-stable.png" alt="VS Code"></div>
+                    <div class="tech-chip"><img src="favicon/PlatformIO_logo.svg.webp" alt="PlatformIO" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/mplab-xide-transparent-background.avif" alt="MPLAB X IDE" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/STM32CubeMX.avif" alt="STM32CubeMX" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/VS-code-stable.png" alt="VS Code" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--text"><span>Git</span></div>
                 </div>
             </div>
@@ -631,19 +642,19 @@
             <div class="tech-stack__group reveal">
                 <span class="tech-stack__label">Cloud Platforms</span>
                 <div class="tech-stack__row">
-                    <div class="tech-chip"><img src="favicon/amazon-web-services-logo-png_seeklogo-532166.png" alt="AWS"></div>
+                    <div class="tech-chip"><img src="favicon/amazon-web-services-logo-png_seeklogo-532166.png" alt="AWS" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--shrink"><img src="favicon/Azure.webp" alt="Azure"></div>
-                    <div class="tech-chip"><img src="favicon/google-cloud-logo-fullcolor.svg" alt="Google Cloud"></div>
-                    <div class="tech-chip"><img src="favicon/Github.png" alt="GitHub"></div>
+                    <div class="tech-chip"><img src="favicon/google-cloud-logo-fullcolor.svg" alt="Google Cloud" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/Github.png" alt="GitHub" loading="lazy" decoding="async"></div>
                 </div>
             </div>
 
             <div class="tech-stack__group reveal">
                 <span class="tech-stack__label">Test & Measurement</span>
                 <div class="tech-stack__row">
-                    <div class="tech-chip"><img src="favicon/keysight-logo.svg" alt="Keysight"></div>
-                    <div class="tech-chip"><img src="favicon/Rohde_&_Schwarz_(2009).svg.webp" alt="Rohde & Schwarz"></div>
-                    <div class="tech-chip"><img src="favicon/Tektronix.svg" alt="Tektronix"></div>
+                    <div class="tech-chip"><img src="favicon/keysight-logo.svg" alt="Keysight" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/Rohde_&_Schwarz_(2009).svg.webp" alt="Rohde & Schwarz" loading="lazy" decoding="async"></div>
+                    <div class="tech-chip"><img src="favicon/Tektronix.svg" alt="Tektronix" loading="lazy" decoding="async"></div>
                     <div class="tech-chip tech-chip--text"><span>NI</span></div>
                     <div class="tech-chip tech-chip--text"><span>LabVIEW</span></div>
                 </div>
@@ -667,7 +678,6 @@
 
             <div class="calendly-embed reveal">
                 <div class="calendly-inline-widget" data-url="https://calendly.com/piwareengineering" style="min-width:280px;height:100%;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
 
         </div>
@@ -683,10 +693,11 @@
 
             <div class="footer__logo">
                 <div class="footer__logo-top">
-                    <img src="assets/images/logo/TPW.png" alt="Piware Engineering">
-                    <span class="footer__logo-text">Piware</span>
+                    <img src="assets/images/logo/TPW.png" alt="Piware Engineering" width="256" height="256" loading="lazy" decoding="async">
+                    <span class="footer__logo-text">Piware Engineering</span>
                 </div>
-                <p>Embedded product development from concept to manufacturing.</p>
+                <h5><span style="padding-left: 8px;">Design - Develop - Deploy</span></h5>
+                <br>
 
                 <div class="footer__social">
                     <a href="https://www.linkedin.com/company/piware/" target="_blank" rel="noopener" class="icon-frame" aria-label="LinkedIn">
