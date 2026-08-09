@@ -36,9 +36,11 @@
 
   /* Motion */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
   --dur-fast: 0.2s;
   --dur-med: 0.4s;
   --dur-slow: 0.7s;
+  --dur-reveal: 0.6s;
 }
 *,
 *::before,
@@ -115,7 +117,8 @@ table {
 }
 @font-face {
   font-family: 'Avenir Black';
-  src: url('assets/fonts/Avenir-Black.ttf') format('truetype');
+  src: url('assets/fonts/Avenir-Black.woff2') format('woff2'),
+       url('assets/fonts/Avenir-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -123,7 +126,8 @@ table {
 
 @font-face {
   font-family: 'Avenir Light';
-  src: url('assets/fonts/Avenir-Light.ttf') format('truetype');
+  src: url('assets/fonts/Avenir-Light.woff2') format('woff2'),
+       url('assets/fonts/Avenir-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -254,6 +258,9 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  transform: scale(1.5);
+  will-change: transform;
 }
 
 .hero__tags {
@@ -375,11 +382,28 @@ section {
 }
 
 .timeline-v__connector {
+  position: relative;
   width: 1px;
   flex: 1;
   min-height: 28px;
   background: var(--color-border);
+  overflow: hidden;
 }
+
+.timeline-v__connector::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-text);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.8s var(--ease-out-soft);
+}
+
+.timeline-v.is-visible .timeline-v__item:nth-child(1) .timeline-v__connector::after { transform: scaleY(1); transition-delay: 0.05s; }
+.timeline-v.is-visible .timeline-v__item:nth-child(2) .timeline-v__connector::after { transform: scaleY(1); transition-delay: 0.35s; }
+.timeline-v.is-visible .timeline-v__item:nth-child(3) .timeline-v__connector::after { transform: scaleY(1); transition-delay: 0.65s; }
+.timeline-v.is-visible .timeline-v__item:nth-child(4) .timeline-v__connector::after { transform: scaleY(1); transition-delay: 0.95s; }
 
 .timeline-v__item:last-child .timeline-v__connector {
   display: none;
@@ -393,6 +417,12 @@ section {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 }
+
+.timeline-v__item:nth-child(1) .timeline-card.reveal { transition-delay: 0.05s; }
+.timeline-v__item:nth-child(2) .timeline-card.reveal { transition-delay: 0.35s; }
+.timeline-v__item:nth-child(3) .timeline-card.reveal { transition-delay: 0.65s; }
+.timeline-v__item:nth-child(4) .timeline-card.reveal { transition-delay: 0.95s; }
+.timeline-v__item:nth-child(5) .timeline-card.reveal { transition-delay: 1.15s; }
 
 /* Process timeline */
 .process-track {
@@ -414,8 +444,15 @@ section {
     left: 5%;
     right: 5%;
     height: 1px;
-    background: var(--color-border);
+    background: var(--color-text);
     z-index: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1.1s var(--ease-out-soft) 0.1s;
+  }
+
+  .process-track.is-visible::before {
+    transform: scaleX(1);
   }
 }
 
@@ -611,7 +648,8 @@ section {
   transition: width var(--dur-fast) var(--ease);
 }
 
-.navbar__link:hover::after {
+.navbar__link:hover::after,
+.navbar__link.is-active::after {
   width: 100%;
 }
 
@@ -789,15 +827,23 @@ section {
 .card {
   background: var(--color-bg);
   padding: 2.25rem 1.75rem;
-  transition: transform var(--dur-fast) var(--ease);
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: transform var(--dur-fast) var(--ease),
+              box-shadow var(--dur-fast) var(--ease);
 }
 
 .card:hover {
   transform: translateY(-4px);
+  box-shadow: inset 0 0 0 1px var(--color-text);
 }
 
 .card .icon-frame {
   margin-bottom: 1.5rem;
+  transition: transform var(--dur-fast) var(--ease);
+}
+
+.card:hover .icon-frame {
+  transform: scale(1.06);
 }
 
 .card h3 {
@@ -811,6 +857,11 @@ section {
 .card--dark {
   background: var(--color-dark-bg);
   color: var(--color-dark-text);
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+.card--dark:hover {
+  box-shadow: inset 0 0 0 1px var(--color-dark-border);
 }
 
 .card--dark p {
@@ -824,11 +875,14 @@ section {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.25rem;
-  transition: transform var(--dur-fast) var(--ease);
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: transform var(--dur-fast) var(--ease),
+              box-shadow var(--dur-fast) var(--ease);
 }
 
 .card--industry:hover {
   transform: translateY(-4px);
+  box-shadow: inset 0 0 0 1px var(--color-text);
 }
 
 .card--industry span {
@@ -890,6 +944,15 @@ section {
   font-family: var(--font-display);
   font-weight: 900;
   font-size: var(--fs-label);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s var(--ease-out-soft) 0.15s,
+              opacity 0.5s var(--ease-out-soft) 0.15s;
+}
+
+.process-step.is-visible .process-step__num {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .process-step h3 {
@@ -937,6 +1000,9 @@ section {
 
 .footer__logo-top img {
   height: 34px;
+  width: 34px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .footer__logo-text {
@@ -974,6 +1040,26 @@ section {
   font-size: var(--fs-small);
 }
 
+.footer__links a {
+  position: relative;
+  display: inline-block;
+}
+
+.footer__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--color-dark-text);
+  transition: width var(--dur-fast) var(--ease);
+}
+
+.footer__links a:hover::after {
+  width: 100%;
+}
+
 .footer__links a:hover,
 .footer__legal a:hover {
   color: var(--color-dark-text);
@@ -998,8 +1084,9 @@ section {
 }
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transform: translateY(16px);
+  transition: opacity var(--dur-reveal) var(--ease-out-soft),
+              transform var(--dur-reveal) var(--ease-out-soft);
 }
 
 .reveal.is-visible {
@@ -1007,8 +1094,72 @@ section {
   transform: translateY(0);
 }
 
-.reveal-stagger.is-visible .reveal-child {
-  transition-delay: calc(var(--stagger-index, 0) * 70ms);
+/* Staggered reveal within a grid/row: each item is still observed and
+   animated independently via .reveal, but nth-child transition-delay
+   fans the entrances out instead of firing in lockstep. */
+.cap-grid > .reveal:nth-child(1) { transition-delay: 0ms; }
+.cap-grid > .reveal:nth-child(2) { transition-delay: 50ms; }
+.cap-grid > .reveal:nth-child(3) { transition-delay: 100ms; }
+.cap-grid > .reveal:nth-child(4) { transition-delay: 150ms; }
+.cap-grid > .reveal:nth-child(5) { transition-delay: 200ms; }
+.cap-grid > .reveal:nth-child(6) { transition-delay: 250ms; }
+.cap-grid > .reveal:nth-child(7) { transition-delay: 300ms; }
+.cap-grid > .reveal:nth-child(8) { transition-delay: 350ms; }
+.cap-grid > .reveal:nth-child(9) { transition-delay: 400ms; }
+
+.industry-grid > .reveal:nth-child(1) { transition-delay: 0ms; }
+.industry-grid > .reveal:nth-child(2) { transition-delay: 50ms; }
+.industry-grid > .reveal:nth-child(3) { transition-delay: 100ms; }
+.industry-grid > .reveal:nth-child(4) { transition-delay: 150ms; }
+.industry-grid > .reveal:nth-child(5) { transition-delay: 200ms; }
+.industry-grid > .reveal:nth-child(6) { transition-delay: 250ms; }
+.industry-grid > .reveal:nth-child(7) { transition-delay: 300ms; }
+.industry-grid > .reveal:nth-child(8) { transition-delay: 350ms; }
+.industry-grid > .reveal:nth-child(9) { transition-delay: 400ms; }
+.industry-grid > .reveal:nth-child(10) { transition-delay: 450ms; }
+
+.why-grid > .reveal:nth-child(1) { transition-delay: 0ms; }
+.why-grid > .reveal:nth-child(2) { transition-delay: 60ms; }
+.why-grid > .reveal:nth-child(3) { transition-delay: 120ms; }
+.why-grid > .reveal:nth-child(4) { transition-delay: 180ms; }
+.why-grid > .reveal:nth-child(5) { transition-delay: 240ms; }
+.why-grid > .reveal:nth-child(6) { transition-delay: 300ms; }
+
+.testimonial-grid > .reveal:nth-child(1) { transition-delay: 0ms; }
+.testimonial-grid > .reveal:nth-child(2) { transition-delay: 80ms; }
+.testimonial-grid > .reveal:nth-child(3) { transition-delay: 160ms; }
+
+.process-track > .reveal:nth-child(1) { transition-delay: 0ms; }
+.process-track > .reveal:nth-child(2) { transition-delay: 60ms; }
+.process-track > .reveal:nth-child(3) { transition-delay: 120ms; }
+.process-track > .reveal:nth-child(4) { transition-delay: 180ms; }
+.process-track > .reveal:nth-child(5) { transition-delay: 240ms; }
+.process-track > .reveal:nth-child(6) { transition-delay: 300ms; }
+.process-track > .reveal:nth-child(7) { transition-delay: 360ms; }
+
+/* Hero content: split into individually-timed children instead of one
+   block reveal, so the eyebrow/heading/copy/tags/actions settle in
+   sequence rather than arriving as a single slab. */
+.hero-content > .eyebrow.reveal { transition-delay: 0ms; }
+.hero-content > h1.reveal { transition-delay: 90ms; }
+.hero-content > p.reveal { transition-delay: 170ms; }
+.hero-content > .hero__tags.reveal { transition-delay: 250ms; }
+.hero-content > .hero__actions.reveal { transition-delay: 330ms; }
+
+/* Hero image: scale-settle instead of translateY, reads as a
+   progressive image reveal rather than the same slide-up as text. */
+.hero__media.reveal {
+  transform: scale(1.045);
+}
+
+.hero__media.reveal.is-visible {
+  transform: scale(1);
+}
+
+/* Numbers animate their text content on reveal; tabular-nums keeps the
+   digit width stable so the layout doesn't jitter while counting. */
+.stat-num {
+  font-variant-numeric: tabular-nums;
 }
 
 .media-zoom {
@@ -1024,13 +1175,25 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .hero__media.reveal {
     opacity: 1;
     transform: none;
     transition: none;
   }
   .media-zoom img {
     transition: none;
+  }
+  .hero__media img {
+    transform: none !important;
+  }
+  .timeline-v__connector::after,
+  .process-track::before {
+    transition: none !important;
+    transform: scaleY(1) !important;
+  }
+  .process-track::before {
+    transform: scaleX(1) !important;
   }
 }
 @media (max-width: 899px) {
@@ -1122,6 +1285,15 @@ section {
   line-height: 1;
   color: var(--color-text-secondary);
   margin-bottom: 1.25rem;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.45s var(--ease-out-soft) 0.15s,
+              opacity 0.45s var(--ease-out-soft) 0.15s;
+}
+
+.testimonial-card.is-visible .quote-mark {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .testimonial-card--dark .quote-mark {
@@ -1206,12 +1378,16 @@ section {
   height: auto;
   object-fit: contain;
   opacity: 0.85;
-  transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+  filter: grayscale(1);
+  transition: opacity var(--dur-fast) var(--ease),
+              transform var(--dur-fast) var(--ease),
+              filter var(--dur-med) var(--ease);
 }
 
 .tech-chip:hover img {
   opacity: 1;
   transform: scale(1.04);
+  filter: grayscale(0);
 }
 
 /* Uniform base height gets each logo in the right neighborhood, but
