@@ -95,7 +95,7 @@ export default function TechStackSection() {
                 ) : (
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={`${item.name} logo - Piware Engineering Stack`}
                     className="max-h-9 max-w-[85%] object-contain filter group-hover:scale-105 transition-all"
                     loading="lazy"
                   />
@@ -103,9 +103,9 @@ export default function TechStackSection() {
               </div>
 
               <div>
-                <div className="text-xs font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
+                <h4 className="text-xs font-bold text-slate-800 group-hover:text-slate-900 transition-colors m-0">
                   {item.name}
-                </div>
+                </h4>
                 <div className="text-[10px] font-mono text-slate-500 line-clamp-1 mt-0.5 font-medium">
                   {item.description}
                 </div>

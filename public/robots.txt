@@ -1,0 +1,18 @@
+# ==============================================================================
+# Piware Engineering — Production Crawler Configuration
+# Domain: https://www.piware.in
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /favicon/
+
+# Disallow build and staging artifacts
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /*?*fbclid=
+Disallow: /*?*utm_*
+
+# Sitemap Location
+Sitemap: https://www.piware.in/sitemap.xml

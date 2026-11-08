@@ -1,6 +1,7 @@
 export const companyInfo = {
   name: "Piware Engineering",
   shortName: "Piware",
+  website: "https://www.piware.in",
   tagline: "Design — Develop — Deploy",
   description: "End-to-End Embedded Product Development Studio. From idea to shipped hardware without the guesswork.",
   email: "h@piware.in",

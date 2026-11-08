@@ -589,6 +589,25 @@ Below is the complete chronological log of engineering enhancements and transfor
   - Replaced all `isText: true` badges with `image: "/favicon/<logo>.svg"`.
   - Every card now renders a crisp, high-resolution vector logo with automatic fallback error recovery.
 
+### Milestone 18: Enterprise Technical SEO, Schema.org JSON-LD & Crawlability Architecture
+- **Indexing & Crawlability Infrastructure**:
+  - Created [`public/robots.txt`](file:///f:/Owais/piware-website/public/robots.txt) allowing search engine crawlers (`Googlebot`, `Bingbot`, etc.) and declaring sitemap pointer.
+  - Created [`public/sitemap.xml`](file:///f:/Owais/piware-website/public/sitemap.xml) mapping the homepage and all core section anchors (`#capabilities`, `#lifecycle`, `#process`, `#stack`, `#industries`, `#why-us`, `#contact`) with priorities and update timestamps.
+  - Implemented authoritative self-referencing canonical URL (`<link rel="canonical" href="https://www.piware.in/">`) preventing duplicate content splitting across Vercel deployment URLs.
+- **Metadata & Head Tag Optimization ([`index.html`](file:///f:/Owais/piware-website/index.html))**:
+  - Upgraded title to high-CTR commercial format: `Piware Engineering — Embedded Systems, Hardware & Agentic AI Studio`.
+  - Optimized meta description to exactly fit Google SERP pixel limits: *"From idea to shipped hardware without guesswork. We architect, prototype, and manufacture advanced electronics, embedded systems, RF, robotics & agentic AI software."*
+  - Added commercial meta keywords, author, publisher, and strict indexing directives (`max-image-preview:large, max-snippet:-1`).
+  - Added local geographic SEO coordinates for Ahmedabad studio (`geo.region: IN-GJ`, `geo.placename: Ahmedabad`, `geo.position: 23.0225;72.5714`, `ICBM`).
+  - Corrected OpenGraph and Twitter cards with absolute URLs (`https://www.piware.in/...`), 1200x630 dimensions, and brand handles.
+- **Multi-Entity Schema.org JSON-LD Knowledge Graph**:
+  - Integrated `@graph` structured data encompassing `Organization`, `ProfessionalService` (Ahmedabad local business), `WebSite`, `WebPage`, and `OfferCatalog` detailing all 12 engineering capabilities.
+- **SPA Non-JS Crawlability Engine**:
+  - Added semantic, hidden `<noscript>` snapshot within `<body>` providing immediate indexable text, links, and coordinates for non-JS search crawlers (Bing, Yahoo, DuckDuckGo).
+- **DOM Semantic Hierarchy (Zero Visual Changes)**:
+  - Upgraded folder titles in [`glass-folder-cards.jsx`](file:///f:/Owais/piware-website/src/components/ui/glass-folder-cards.jsx) to semantic `<h3>` headings with zero styling change.
+  - Upgraded tech stack card titles in [`TechStackSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TechStackSection.jsx) to `<h4>` headings and descriptive image alt tags.
+
 ---
 
 ## 📞 Studio Contact & Coordinates

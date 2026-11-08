@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Primary Homepage -->
+    <url>
+        <loc>https://www.piware.in/</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Core Engineering Disciplines -->
+    <url>
+        <loc>https://www.piware.in/#capabilities</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Electronics Stage-Gate Lifecycle -->
+    <url>
+        <loc>https://www.piware.in/#lifecycle</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Turnkey Engineering Methodology -->
+    <url>
+        <loc>https://www.piware.in/#process</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Silicon, CAD & Toolchain Stack -->
+    <url>
+        <loc>https://www.piware.in/#stack</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Industry Verticals -->
+    <url>
+        <loc>https://www.piware.in/#industries</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Studio Credibility & Differentiators -->
+    <url>
+        <loc>https://www.piware.in/#why-us</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Technical Consultation & Studio Contact -->
+    <url>
+        <loc>https://www.piware.in/#contact</loc>
+        <lastmod>2026-11-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

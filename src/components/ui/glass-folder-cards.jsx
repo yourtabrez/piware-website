@@ -1180,7 +1180,7 @@ export default function GlassFolder({
               onClick={() => setOpen(!open)}
             />
             <div className="gf-label">
-              <span className="gf-title">{label}</span>
+              <h3 className="gf-title m-0">{label}</h3>
               <span className="gf-meta" key={metaLine}>
                 {metaLine}
               </span>
