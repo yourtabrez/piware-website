@@ -1,4 +1,4 @@
-# Piware Engineering — Embedded Product Development Studio
+# Piware Engineering | Embedded Systems, Hardware & Agentic AI Studio
 
 <div align="center">
 
@@ -13,10 +13,10 @@
 [![Vite](https://img.shields.io/badge/Vite-6.1-646CFF.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-14.9-black.svg?logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![Deployment](https://img.shields.io/badge/Deployed-Vercel-black.svg?logo=vercel&logoColor=white)](https://piware-website.vercel.app)
+[![Deployment](https://img.shields.io/badge/Deployed-Vercel_Edge-black.svg?logo=vercel&logoColor=white)](https://www.piware.in)
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)](https://piware.in)
 
-[🌐 Live Production Website](https://piware-website.vercel.app) &bull; [📅 Book Technical Consultation](https://calendly.com/piwareengineering) &bull; [✉️ Contact Studio](mailto:h@piware.in)
+[🌐 Live Production Website](https://www.piware.in) &bull; [📅 Book Technical Consultation](https://calendly.com/piwareengineering) &bull; [✉️ Contact Studio](mailto:h@piware.in)
 
 </div>
 
@@ -134,17 +134,26 @@ To prevent external network dependencies, privacy concerns, and layout shift (CL
 ### 5. Interactive Glass Folder Dossiers ([`CapabilitiesSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/CapabilitiesSection.jsx) & [`glass-folder-cards.jsx`](file:///f:/Owais/piware-website/src/components/ui/glass-folder-cards.jsx))
 - **Physical 3D Object Dossiers**: Replaces static capability grids with interactive 3D physical folders containing real fanning deliverables.
 - **Three-Layer Depth Architecture**:
-  1. **Back Panel**: Carries authentic vector engineering artwork.
+  1. **Back Panel**: Carries authentic vector engineering artwork tailored to each technical discipline.
   2. **Elevating Deliverable Sheets**: Real DOM buttons that elevate, fan out, and display deliverables upon hover or click.
   3. **Frosted Milk-Glass Front Panel**: `backdrop-filter: blur(20px)` glass panel with light reflection highlight and tab handle.
 - **Dynamic Viewport Width Calibration**: Automatically adapts folder width on narrow mobile displays (`<360px`) to prevent card clipping, paired with touch-oriented guidance (*"Tap dossier to fan out deliverables"*).
-- **Six Bespoke Vector Engineering Artworks**:
+- **Domain Filter Tabs & Responsive 4x3 Grid**:
+  - Organized into 4 domain filters: `All Disciplines (12)`, `Hardware & RF (4)`, `Intelligent Systems & AI (4)`, `Cloud, Software & Mfg (4)`.
+  - Upgraded folder titles to semantic `<h3>` elements with zero visual change for optimal search engine crawling.
+- **Twelve Bespoke Vector Engineering Artworks**:
   1. **Hardware Architecture**: Blueprint Navy (`#0B1528`) with golden power rails (`+3.3V_SYS`), decoupling capacitor bank (`C10 100nF`), 24.00MHz crystal oscillator, and `STM32H753` 480MHz MCU pinout block.
   2. **High-Speed PCB Design**: Authentic Dark Emerald Solder Mask (`#02281D`) with ENIG Gold Serpentine Differential Pair delay tuning (`90Ω USB 3.2 / PCIe`), micro-vias, and `BGA-144` 45° dogbone breakout routing.
-  3. **Firmware Engineering**: Phosphor Digital Oscilloscope HUD (`#080E18`) with Electric Cyan square-wave clock pulse trains (`CH1: 80MHz`), Neon Emerald SPI byte stream, and FreeRTOS deterministic task scheduler lanes.
-  4. **FPGA & Digital Logic**: Silicon Violet Die (`#100C1F`) with digital logic gates (`LUT_AND2`, `D-Flip-Flop`, `XOR_FAST`), 64-bit AXI4 crossbar, and 250 MSPS DSP48E2 MAC filter accelerator.
-  5. **Mechanical & Enclosure**: CAD Drafting Charcoal Viewport (`#0E1726`) with Precision Dual-Arrow Dimension Extension Callouts (`142.50 mm`), M3 brass threaded heat-stake screw boss, and vibrant emerald **IP67 silicone waterproof gasket**.
-  6. **Turnkey Manufacturing**: Industrial SMT Panel Slate (`#0A121E`) with Optical Alignment Fiducials (`⊕ FID_1`), breakaway mouse-bites, golden bed-of-nails test points (`TP_VBAT`), and 2x2 board panel with green AOI pass stamps.
+  3. **Antenna & RF Engineering**: High-frequency Smith chart impedance matching contours, 2.4/5.8 GHz microstrip patch antenna, Wilkinson power divider, and RF front-end stripline.
+  4. **Deterministic Firmware Engineering**: Phosphor Digital Oscilloscope HUD (`#080E18`) with Electric Cyan square-wave clock pulse trains (`CH1: 80MHz`), Neon Emerald SPI byte stream, and FreeRTOS deterministic task scheduler lanes.
+  5. **Robotics & Intelligent Motion Control**: 3-phase BLDC motor stator geometry, space vector PWM (SVPWM) field-oriented control vectors, 6-DOF robotic arm kinematic link segments, and encoder telemetry.
+  6. **Agentic AI & Multi-Agent Systems**: Interactive LangGraph state machine with cyclic graph loops, Supervisor agent routing, Tool Runner execution nodes, and JSON function-calling schema validation.
+  7. **Enterprise RAG & Document Intelligence**: Production document ingestion pipeline with PyMuPDF parsing, 3072-dimensional vector space scatter plot, and Supabase pgvector HNSW cosine similarity clustering.
+  8. **Full-Stack Web & AI SaaS Platforms**: Clean 3-tier cloud architecture diagram spanning Next.js/React TypeScript DOM tree, FastAPI async REST API router, and PostgreSQL tables with Row Level Security (RLS).
+  9. **Industry 4.0 & Industrial Automation**: Industrial PLC ladder logic rung, SCADA process tank telemetry, RS-485 / Modbus RTU communication bus, and machine monitoring gauges.
+  10. **FPGA & Digital Logic**: Silicon Violet Die (`#100C1F`) with digital logic gates (`LUT_AND2`, `D-Flip-Flop`, `XOR_FAST`), 64-bit AXI4 crossbar, and 250 MSPS DSP48E2 MAC filter accelerator.
+  11. **Mechanical & Enclosure Design**: CAD Drafting Charcoal Viewport (`#0E1726`) with Precision Dual-Arrow Dimension Extension Callouts (`142.50 mm`), M3 brass threaded heat-stake screw boss, and vibrant emerald **IP67 silicone waterproof gasket**.
+  12. **Turnkey Volume Manufacturing**: Industrial SMT Panel Slate (`#0A121E`) with Optical Alignment Fiducials (`⊕ FID_1`), breakaway mouse-bites, golden bed-of-nails test points (`TP_VBAT`), and 2x2 board panel with green AOI pass stamps.
 
 ### 6. Electronics Stage-Gate Lifecycle Explorer ([`TimelineSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TimelineSection.jsx))
 - **5-Stage Electronics Engineering Roadmap**:
@@ -199,6 +208,17 @@ To prevent external network dependencies, privacy concerns, and layout shift (CL
 - **Dynamic Clockwise SVG Radial Stroke**: Fills in real-time (`pathLength: scrollYProgress`) with Swiss precision cobalt blue (`#2563EB`).
 - **Viewport Threshold & Coordinated Elevation**: Smoothly springs into view past `280px` scroll depth. Positioned at `bottom-20 right-4` on mobile (resting 16px cleanly above the mobile bottom nav bar) and `bottom-7 right-7` on desktop.
 
+### 14. Enterprise Technical SEO, Schema.org JSON-LD & Crawlability Engine ([`index.html`](file:///f:/Owais/piware-website/index.html))
+- **Authoritative Canonical Domain**: Self-referencing `<link rel="canonical" href="https://www.piware.in/">` consolidates link equity and avoids duplicate indexing with Vercel edge deployment domains.
+- **Search Engine Indexing Directives**: Explicit `max-image-preview:large, max-snippet:-1, max-video-preview:-1` across `robots`, `googlebot`, and `bingbot` maximizing CTR across Google Discover and rich SERP cards.
+- **Local & Geographic Telemetry Tags**: Exact studio coordinates (`geo.region: IN-GJ`, `geo.placename: Ahmedabad`, `geo.position: 23.0225;72.5714`, `ICBM`) for regional and national search discovery.
+- **Multi-Entity Schema.org JSON-LD Knowledge Graph**:
+  - `@graph` structured data encompassing `Organization` (founder, logo, coordinates, contact, social `sameAs` links), `ProfessionalService` (Ahmedabad local business address, opening hours), `WebSite`, `WebPage`, and `OfferCatalog` detailing all 12 core engineering capabilities.
+- **SPA Non-JS Crawlability Engine**:
+  - Semantic, styled `<noscript>` snapshot within `<body>` providing immediate indexable text, links, and coordinates for non-JS search crawlers (Bingbot, Yahoo, DuckDuckGo, social scrapers).
+- **DOM Semantic Hierarchy**:
+  - Cascades strictly: `<h1>` (Hero headline) &rarr; `<h2>` (Section heads) &rarr; `<h3>` (Capabilities folder titles & Process cards) &rarr; `<h4>` (Tech stack toolchains & Consultation deliverables).
+
 ---
 
 ## 🎨 Favicon & Brand Asset Engineering Pipeline
@@ -234,6 +254,8 @@ piware-website/
 ├── public/                               # Static assets served at root /
 │   ├── favicon.ico                       # Multi-resolution root favicon fallback
 │   ├── favicon.svg                       # Lossless SVG vector favicon
+│   ├── robots.txt                        # Production search crawler access directives
+│   ├── sitemap.xml                       # Production XML sitemap protocol
 │   ├── assets/
 │   │   ├── fonts/                        # Self-hosted zero-latency fonts
 │   │   │   ├── Avenir-Black.woff2        # Primary display typeface (33 KB)
