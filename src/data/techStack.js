@@ -13,20 +13,20 @@ export const techCategories = [
 
 export const techItems = [
   // Agentic AI & LLMs
-  { name: "LangGraph", category: "ai", isText: true, textBadge: "LangGraph", description: "Stateful multi-agent cyclic graph orchestration" },
-  { name: "LangChain", category: "ai", isText: true, textBadge: "LangChain", description: "Agent memory, chains & tool-calling primitives" },
-  { name: "OpenAI APIs", category: "ai", isText: true, textBadge: "OpenAI", description: "GPT-4o, embeddings & structured function calling" },
-  { name: "Google Gemini", category: "ai", image: "/favicon/google-cloud-logo-fullcolor.svg", description: "Multimodal Gemini Live & Long-Context models" },
-  { name: "Supabase pgvector", category: "ai", isText: true, textBadge: "pgvector", description: "High-dimensional HNSW cosine vector search" },
-  { name: "PyMuPDF", category: "ai", isText: true, textBadge: "PyMuPDF", description: "High-precision document parsing & text extraction" },
+  { name: "LangGraph", category: "ai", image: "/favicon/langgraph-logo.svg", description: "Stateful multi-agent cyclic graph orchestration" },
+  { name: "LangChain", category: "ai", image: "/favicon/langchain-logo.svg", description: "Agent memory, chains & tool-calling primitives" },
+  { name: "OpenAI APIs", category: "ai", image: "/favicon/openai-logo.svg", description: "GPT-4o, embeddings & structured function calling" },
+  { name: "Google Gemini", category: "ai", image: "/favicon/gemini-logo.svg", description: "Multimodal Gemini Live & Long-Context models" },
+  { name: "Supabase pgvector", category: "ai", image: "/favicon/supabase-logo.svg", description: "High-dimensional HNSW cosine vector search" },
+  { name: "PyMuPDF", category: "ai", image: "/favicon/pymupdf-logo.svg", description: "High-precision document parsing & text extraction" },
 
   // Full-Stack & Automation
-  { name: "Next.js", category: "fullstack", isText: true, textBadge: "Next.js", description: "Full-stack React framework & server components" },
-  { name: "Python & FastAPI", category: "fullstack", isText: true, textBadge: "FastAPI", description: "High-performance async REST APIs & Pydantic" },
-  { name: "PostgreSQL", category: "fullstack", isText: true, textBadge: "PostgreSQL", description: "Relational modeling & Row Level Security (RLS)" },
-  { name: "Docker", category: "fullstack", isText: true, textBadge: "Docker", description: "Containerized microservices & reproducible envs" },
-  { name: "n8n Automation", category: "fullstack", isText: true, textBadge: "n8n", description: "Self-hosted event-driven webhook orchestration" },
-  { name: "Tailwind CSS", category: "fullstack", isText: true, textBadge: "Tailwind", description: "Utility-first design token styling system" },
+  { name: "Next.js", category: "fullstack", image: "/favicon/nextjs-logo.svg", description: "Full-stack React framework & server components" },
+  { name: "Python & FastAPI", category: "fullstack", image: "/favicon/fastapi-logo.svg", description: "High-performance async REST APIs & Pydantic" },
+  { name: "PostgreSQL", category: "fullstack", image: "/favicon/postgresql-logo.svg", description: "Relational modeling & Row Level Security (RLS)" },
+  { name: "Docker", category: "fullstack", image: "/favicon/docker-logo.svg", description: "Containerized microservices & reproducible envs" },
+  { name: "n8n Automation", category: "fullstack", image: "/favicon/n8n-logo.svg", description: "Self-hosted event-driven webhook orchestration" },
+  { name: "Tailwind CSS", category: "fullstack", image: "/favicon/tailwind-logo.svg", description: "Utility-first design token styling system" },
 
   // EDA & Mechanical
   { name: "Altium Designer", category: "design", image: "/favicon/Altium_Logo.svg.webp", description: "Multilayer high-speed PCB layout & routing" },
@@ -52,8 +52,8 @@ export const techItems = [
   { name: "Infineon", category: "fpga", image: "/favicon/Infineon_logo.svg", description: "Automotive semiconductors, MOSFETs & radar" },
 
   // RTOS & Embedded OS
-  { name: "FreeRTOS", category: "os", isText: true, textBadge: "FreeRTOS", description: "Deterministic pre-emptive real-time operating system" },
-  { name: "Zephyr Project", category: "os", isText: true, textBadge: "Zephyr", description: "Modern modular RTOS with robust BLE/IP stacks" },
+  { name: "FreeRTOS", category: "os", image: "/favicon/freertos-logo.svg", description: "Deterministic pre-emptive real-time operating system" },
+  { name: "Zephyr Project", category: "os", image: "/favicon/zephyr-logo.svg", description: "Modern modular RTOS with robust BLE/IP stacks" },
   { name: "Embedded Linux", category: "os", image: "/favicon/linux-embedded.png", description: "Custom kernel bring-up, device trees & rootfs" },
   { name: "Yocto Project", category: "os", image: "/favicon/YoctoProject_Logo_RGB_White_small.svg", description: "Custom reproducible Linux board distributions" },
   { name: "Buildroot", category: "os", image: "/favicon/buildroot-logo.png", description: "Fast, minimal embedded Linux distributions" },
@@ -64,7 +64,7 @@ export const techItems = [
   { name: "MPLAB X IDE", category: "tools", image: "/favicon/mplab-xide-transparent-background.avif", description: "Microchip toolchain & hardware debuggers" },
   { name: "STM32Cube", category: "tools", image: "/favicon/STM32CubeMX.avif", description: "STM32 pinout configuration & HAL generators" },
   { name: "VS Code", category: "tools", image: "/favicon/VS-code-stable.png", description: "C/C++, CMake & embedded debugging setup" },
-  { name: "Git", category: "tools", isText: true, textBadge: "Git", description: "Version-controlled firmware & hardware repos" },
+  { name: "Git", category: "tools", image: "/favicon/git-logo.svg", description: "Version-controlled firmware & hardware repos" },
 
   // Cloud IoT
   { name: "Amazon Web Services", category: "cloud", image: "/favicon/amazon-web-services-logo-png_seeklogo-532166.png", description: "AWS IoT Core, Lambda, DynamoDB & S3" },
@@ -76,6 +76,6 @@ export const techItems = [
   { name: "Keysight Technologies", category: "test", image: "/favicon/keysight-logo.svg", description: "High-bandwidth oscilloscopes & spectrum analyzers" },
   { name: "Rohde & Schwarz", category: "test", image: "/favicon/Rohde_&_Schwarz_(2009).svg.webp", description: "RF vector signal generators & EMC receivers" },
   { name: "Tektronix", category: "test", image: "/favicon/Tektronix.svg", description: "Mixed signal oscilloscopes & arbitrary generators" },
-  { name: "National Instruments", category: "test", isText: true, textBadge: "NI", description: "Automated DAQ & modular instrumentation" },
-  { name: "LabVIEW", category: "test", isText: true, textBadge: "LabVIEW", description: "Custom automated manufacturing test fixtures (FCT)" },
+  { name: "National Instruments", category: "test", image: "/favicon/ni-logo.svg", description: "Automated DAQ & modular instrumentation" },
+  { name: "LabVIEW", category: "test", image: "/favicon/labview-logo.svg", description: "Custom automated manufacturing test fixtures (FCT)" },
 ];

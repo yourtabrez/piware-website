@@ -166,14 +166,18 @@ To prevent external network dependencies, privacy concerns, and layout shift (CL
 - **Client Endorsements ([`TestimonialsSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TestimonialsSection.jsx))**: Verified reviews from OEM leaders, CTOs, and startup founders.
 
 ### 9. Filterable Industry Tech Stack ([`TechStackSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TechStackSection.jsx))
-- Catalogs **35+ industry-standard semiconductor vendors, EDA suites, and measurement equipment** across 6 tabs:
-  - *Microcontrollers & SoCs* (STMicroelectronics, Espressif, Texas Instruments, NXP, Microchip, Raspberry Pi, ARM).
-  - *EDA & Simulation Tools* (Altium Designer, KiCad, Cadence, Autodesk Fusion, SolidWorks).
-  - *Test & Measurement* (Keysight Technologies, Tektronix, Rohde & Schwarz).
-  - *Firmware & Embedded OS* (FreeRTOS, Zephyr, Yocto Project, Buildroot, ESP-IDF, MPLAB X, VS Code, STM32CubeMX).
-  - *Digital Logic & FPGA* (AMD Xilinx, Intel Altera, Lattice).
-  - *Cloud IoT Platforms* (AWS IoT Core, Microsoft Azure IoT, Google Cloud IoT).
-- **Touch-Scrollable Pill Navigation**: Features a silky, zero-scrollbar horizontal touch carousel on mobile devices.
+- Catalogs **45+ industry-standard toolchains, frameworks, semiconductor vendors, and measurement suites** across 10 categories:
+  - *Agentic AI & LLMs* (LangGraph, LangChain, OpenAI APIs, Google Gemini, Supabase pgvector, PyMuPDF).
+  - *Full-Stack & Cloud* (Next.js, Python & FastAPI, PostgreSQL, Docker, n8n Automation, Tailwind CSS).
+  - *EDA & Mechanical CAD* (Altium Designer, KiCad, Cadence Allegro, SolidWorks, Autodesk Fusion).
+  - *Microcontrollers & SoC* (STMicroelectronics, Espressif, NXP, Microchip, ARM, AMD Embedded, Raspberry Pi).
+  - *FPGA, Analog & Power* (AMD Xilinx, Intel Altera, Texas Instruments, Analog Devices, Infineon).
+  - *RTOS & Embedded Linux* (FreeRTOS, Zephyr Project, Embedded Linux, Yocto Project, Buildroot).
+  - *IDE & Firmware Tooling* (ESP-IDF, PlatformIO, MPLAB X, STM32Cube, VS Code, Git).
+  - *Cloud IoT & DevOps* (AWS IoT Core, Microsoft Azure, Google Cloud, GitHub DevOps).
+  - *Test & Measurement* (Keysight Technologies, Rohde & Schwarz, Tektronix, National Instruments, LabVIEW).
+- **Official Vector Logos & Scalable SVGs**: Every single card in the 45+ item catalog displays its official high-resolution vector logo (`public/favicon/*-logo.svg`), replacing temporary text fallbacks with crisp, pixel-perfect brandmarks (with automatic fallback to text on error).
+- **Touch-Scrollable Pill Navigation**: Features a silky, zero-scrollbar horizontal touch carousel on mobile devices and smooth category-swap entrance animations.
 
 ### 10. Symmetrical Technical Consultation Suite ([`ConsultationSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/ConsultationSection.jsx))
 - **Equal-Height 2-Column Grid (`items-stretch`)**: Solved column height disparity by combining briefing information and direct contact channels into a single unified dossier matching the Calendly scheduler enclosure.
@@ -244,14 +248,31 @@ piware-website/
 │   │       └── logo/                     # Brand identity wordmarks & badges
 │   │           ├── TPB.webp              # Transparent black/light mode logo (30 KB)
 │   │           └── TPW.webp              # Transparent white/dark mode logo (34 KB)
-│   └── favicon/                          # Favicon suite & 35+ vendor tech logos
+│   └── favicon/                          # Favicon suite & 45+ vendor tech logos
 │       ├── favicon.ico                   # Standard multi-res ICO
 │       ├── favicon-16x16.png             # 16px tab icon
 │       ├── favicon-32x32.png             # 32px tab icon
 │       ├── apple-touch-icon.png          # 180px iOS icon
 │       ├── favicon.svg                   # Vector favicon
 │       ├── favicon.webp                  # Compressed WebP favicon
-│       └── [35+ vendor logos]           # Altium, STM32, Xilinx, Keysight, etc.
+│       ├── openai-logo.svg               # OpenAI official vector mark & typography
+│       ├── langchain-logo.svg            # LangChain official vector mark & typography
+│       ├── langgraph-logo.svg            # LangGraph multi-agent cyclic vector mark
+│       ├── gemini-logo.svg               # Google Gemini multimodal vector mark
+│       ├── supabase-logo.svg             # Supabase / pgvector vector mark
+│       ├── pymupdf-logo.svg              # PyMuPDF vector mark
+│       ├── nextjs-logo.svg               # Next.js official vector mark
+│       ├── fastapi-logo.svg              # FastAPI official vector mark
+│       ├── postgresql-logo.svg           # PostgreSQL Slonik vector mark
+│       ├── docker-logo.svg               # Docker microservices vector mark
+│       ├── n8n-logo.svg                  # n8n workflow automation vector mark
+│       ├── tailwind-logo.svg             # Tailwind CSS vector mark
+│       ├── freertos-logo.svg             # FreeRTOS real-time OS vector mark
+│       ├── zephyr-logo.svg               # Zephyr Project RTOS vector mark
+│       ├── git-logo.svg                  # Git version control vector mark
+│       ├── ni-logo.svg                   # National Instruments vector mark
+│       ├── labview-logo.svg              # LabVIEW test automation vector mark
+│       └── [25+ vendor logos]           # Altium, STM32, Xilinx, Keysight, etc.
 ├── src/                                  # Application source code
 │   ├── components/
 │   │   ├── common/                       # Reusable UI primitives
@@ -544,27 +565,29 @@ Below is the complete chronological log of engineering enhancements and transfor
   - Configured [`.vscode/settings.json`](file:///f:/Owais/piware-website/.vscode/settings.json) with `css.lint.unknownAtRules: "ignore"` to eliminate CSS linter warnings on `@tailwind` directives.
   - Added [`.vscode/extensions.json`](file:///f:/Owais/piware-website/.vscode/extensions.json) recommending the official Tailwind CSS IntelliSense extension.
 
-### Milestone 16: Enterprise AI & Full-Stack Studio Expansion (Agentic AI, RAG, SaaS Platforms & Automation)
-- **Unified 12-Dossier Modular Catalog with Domain Filter Tabs ([`CapabilitiesSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/CapabilitiesSection.jsx))**:
-  - Expanded interactive physical folders into a 12-discipline catalog arranged in a clean 4×3 grid on desktop and responsive swipe layout on mobile.
-  - Implemented interactive domain filter tabs:
-    - `All Disciplines (12)`: Complete studio catalog.
-    - `Hardware & RF (4)`: Hardware Architecture, High-Speed PCB, Antenna & RF, Mechanical CAD.
-    - `Intelligent Systems & AI (4)`: Agentic AI & Autonomous Agents, Enterprise RAG Systems, Robotics & Motion Control, Firmware Engineering.
-    - `Cloud, Software & Mfg (4)`: Full-Stack SaaS Platforms, Industry 4.0 & Automation, FPGA Digital Logic, Turnkey Volume Manufacturing.
-- **Three New Bespoke Engineering Vector Artworks ([`glass-folder-cards.jsx`](file:///f:/Owais/piware-website/src/components/ui/glass-folder-cards.jsx))**:
-  - **`AgenticAiArt`**: Interactive LangGraph state machine with cyclic graph loops, Supervisor agent routing, Tool Runner nodes, and JSON function-calling schema validation.
-  - **`RagIntelligenceArt`**: Production RAG ingestion pipeline with PyMuPDF document parsing, 3072-dimensional vector space scatter plot, and Supabase pgvector HNSW cosine similarity clustering.
-  - **`FullStackSaasArt`**: Clean 3-tier cloud architecture diagram spanning Next.js/React TypeScript DOM tree, FastAPI async REST API router, and PostgreSQL tables with Row Level Security (RLS).
-- **Engineering Tech Stack Expansion ([`techStack.js`](file:///f:/Owais/piware-website/src/data/techStack.js))**:
-  - Added two dedicated categories to the interactive filter bar:
-    - `"Agentic AI & LLMs"`: LangGraph, LangChain, OpenAI APIs, Google Gemini, Supabase pgvector, PyMuPDF.
-    - `"Full-Stack & Cloud"`: Next.js, Python & FastAPI, PostgreSQL, Docker, n8n Automation, Tailwind CSS.
-- **Brand & Lifecycle Process Synchronization**:
-  - **Hero Section ([`HeroSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/HeroSection.jsx))**: Updated telemetry bar to `"STANDARDS: IPC-A-610 CLASS 3 • AGENTIC AI & EMBEDDED LABS"` and refined trust badge to `"Founder-Led Hardware & AI Engineering"`.
-  - **Lifecycle Process ([`process.js`](file:///f:/Owais/piware-website/src/data/process.js))**: Weaved AI system topology, cloud vs. edge inference latency modeling, async API pipelines, and autonomous agent evaluation into the 7-stage methodology.
-  - **Technical Consultation ([`ConsultationSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/ConsultationSection.jsx))**: Expanded briefing items to evaluate AI model feasibility, cloud inference costs, and full-stack software architecture.
-  - **Footer Sitemap ([`Footer.jsx`](file:///f:/Owais/piware-website/src/components/layout/Footer.jsx))**: Updated direct links to include Agentic AI, Enterprise RAG, and Full-Stack SaaS platforms.
+### Milestone 17: Official Vector Logo Suite Across Complete Tech Stack & Measurement Tooling
+- **Replaced All Temporary Text Badges with Official Vector Assets**:
+  - Designed and added 17 crisp, scalable SVG brandmarks to `public/favicon/` adhering strictly to official brand guidelines, colors, and typography lockups:
+    - **`openai-logo.svg`**: OpenAI swirl brandmark with official bold typography lockup.
+    - **`langchain-logo.svg`**: LangChain emerald/teal badge and typography.
+    - **`langgraph-logo.svg`**: LangGraph cyclic multi-agent graph node topology and typography.
+    - **`gemini-logo.svg`**: Google Gemini 4-pointed radiant gradient starburst with modern sans wordmark.
+    - **`supabase-logo.svg`**: Supabase emerald green lightning bolt with clean brand wordmark.
+    - **`pymupdf-logo.svg`**: PyMuPDF crimson document badge with Mu glyph and typography.
+    - **`nextjs-logo.svg`**: Next.js monochrome badge and wordmark lockup.
+    - **`fastapi-logo.svg`**: FastAPI teal circle with white lightning bolt and bold title.
+    - **`postgresql-logo.svg`**: PostgreSQL Slonik elephant emblem and corporate blue typography.
+    - **`docker-logo.svg`**: Docker containerized cargo whale and brandmark.
+    - **`n8n-logo.svg`**: n8n node automation connector graph in signature coral-red.
+    - **`tailwind-logo.svg`**: Tailwind CSS dual-wave cyan glyph and typography lockup.
+    - **`freertos-logo.svg`**: FreeRTOS deterministic task scheduler clock badge and wordmark.
+    - **`zephyr-logo.svg`**: Zephyr Project origami kite chevron in deep violet and indigo.
+    - **`git-logo.svg`**: Git branch node rotated diamond in signature Git orange.
+    - **`ni-logo.svg`**: National Instruments corporate mark and typography.
+    - **`labview-logo.svg`**: LabVIEW yellow test badge with oscilloscope waveform and typography.
+- **Tech Stack Data Synchronization ([`techStack.js`](file:///f:/Owais/piware-website/src/data/techStack.js))**:
+  - Replaced all `isText: true` badges with `image: "/favicon/<logo>.svg"`.
+  - Every card now renders a crisp, high-resolution vector logo with automatic fallback error recovery.
 
 ---
 
