@@ -30,7 +30,7 @@ export default {
       },
       fontFamily: {
         display: ['"Avenir Black"', '"Inter"', 'system-ui', 'sans-serif'],
-        body: ['"Avenir Light"', '"Inter"', 'system-ui', 'sans-serif'],
+        body: ['-apple-system', 'BlinkMacSystemFont', '"Inter"', '"Segoe UI"', 'Roboto', 'sans-serif'],
         mono: ['"JetBrains Mono"', '"SF Mono"', 'Menlo', 'monospace'],
       },
       boxShadow: {

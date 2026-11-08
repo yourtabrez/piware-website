@@ -100,13 +100,13 @@ export default function IndustriesSection() {
                     </span>
                   </div>
 
-                  <h3 className="text-base font-extrabold text-slate-900 mb-1">
+                  <h3 className="text-base sm:text-lg font-extrabold text-slate-900 mb-1">
                     {ind.name}
                   </h3>
-                  <div className="text-xs font-mono text-slate-500 font-semibold mb-2">
+                  <div className="text-xs font-mono text-slate-600 font-bold mb-2">
                     {ind.headline}
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                     {ind.description}
                   </p>
                 </div>

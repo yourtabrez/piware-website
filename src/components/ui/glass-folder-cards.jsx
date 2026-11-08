@@ -469,21 +469,252 @@ export const ManufacturingSmtArt = () => (
   </svg>
 );
 
+export const RfAntennaArt = () => (
+  <svg
+    viewBox="0 0 340 272"
+    className="gf-art w-full h-full"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Blueprint RF Deep Navy Background */}
+    <rect width="340" height="272" fill="#0A1324" />
+    <defs>
+      <pattern id="rf-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#162947" strokeWidth="0.8" />
+      </pattern>
+    </defs>
+    <rect width="340" height="272" fill="url(#rf-grid)" />
+
+    {/* Top Tab Area Engineering Features */}
+    <g strokeLinecap="round" strokeLinejoin="round">
+      {/* 50 Ohm Microstrip Feedline */}
+      <path d="M16 26 L80 26" stroke="#38BDF8" strokeWidth="2.4" />
+      <text x="18" y="19" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">50Ω_RF_FEED</text>
+      {/* Impedance Matching Pi-Network */}
+      <circle cx="80" cy="26" r="3.5" fill="#38BDF8" />
+      <path d="M80 26 L120 26" stroke="#F59E0B" strokeWidth="1.8" />
+      <text x="86" y="19" fill="#FCD34D" fontSize="7" fontFamily="monospace">L1 2.2nH</text>
+      <path d="M100 26 L100 40" stroke="#38BDF8" strokeWidth="1.2" />
+      <line x1="94" y1="40" x2="106" y2="40" stroke="#38BDF8" strokeWidth="1.5" />
+      <line x1="94" y1="43" x2="106" y2="43" stroke="#38BDF8" strokeWidth="1.5" />
+      <path d="M100 43 L100 52" stroke="#94A3B8" strokeWidth="1" />
+      <line x1="96" y1="52" x2="104" y2="52" stroke="#94A3B8" strokeWidth="1" />
+      <text x="110" y="44" fill="#93C5FD" fontSize="6.5" fontFamily="monospace">C1 0.8pF</text>
+      <path d="M120 26 L160 26" stroke="#38BDF8" strokeWidth="2.4" />
+
+      {/* Frequency & Bandwidth Pill */}
+      <rect x="200" y="14" width="76" height="22" rx="4" fill="#0C1B33" stroke="#38BDF8" strokeWidth="1.2" />
+      <text x="206" y="29" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">2.44 & 5.8 GHz</text>
+    </g>
+
+    {/* Center Smith Chart & Polar Radiation Pattern Visualization */}
+    <g transform="translate(60, 68)">
+      {/* Smith Chart Outer Boundary Circle */}
+      <circle cx="110" cy="80" r="66" fill="#0B1A30" stroke="#1E3A8A" strokeWidth="1.6" />
+      {/* Horizontal Axis */}
+      <line x1="44" y1="80" x2="176" y2="80" stroke="#38BDF8" strokeWidth="1" strokeDasharray="3 3" />
+      {/* Resistance Circles */}
+      <circle cx="125" cy="80" r="51" fill="none" stroke="#2563EB" strokeWidth="0.8" opacity="0.6" />
+      <circle cx="143" cy="80" r="33" fill="none" stroke="#2563EB" strokeWidth="0.8" opacity="0.6" />
+      <circle cx="160" cy="80" r="16" fill="none" stroke="#38BDF8" strokeWidth="0.9" opacity="0.8" />
+      {/* Reactance Arcs */}
+      <path d="M176 80 A 66 66 0 0 0 110 14" fill="none" stroke="#60A5FA" strokeWidth="0.8" opacity="0.5" />
+      <path d="M176 80 A 66 66 0 0 1 110 146" fill="none" stroke="#60A5FA" strokeWidth="0.8" opacity="0.5" />
+      
+      {/* Tuned Match Marker (Center 50Ω Prime Point) */}
+      <circle cx="110" cy="80" r="4.5" fill="#10B981" stroke="#FFFFFF" strokeWidth="1.5" />
+      <text x="118" y="76" fill="#34D399" fontSize="8" fontFamily="monospace" fontWeight="bold">Z0 = 50.2 + j0.4 Ω</text>
+      <text x="118" y="87" fill="#94A3B8" fontSize="7" fontFamily="monospace">VSWR: 1.08:1</text>
+
+      {/* S11 Return Loss Waveform Plot (Bottom left of block) */}
+      <path d="M-20 120 L20 120 L40 142 L55 124 L80 124" fill="none" stroke="#F59E0B" strokeWidth="1.6" strokeLinecap="round" />
+      <text x="-20" y="114" fill="#FCD34D" fontSize="7" fontFamily="monospace">S11: -28.4 dB @ 2.44GHz</text>
+    </g>
+
+    {/* Title Block */}
+    <g transform="translate(170, 226)">
+      <rect x="0" y="0" width="160" height="38" rx="4" fill="#0C1B33" stroke="#1E3A8A" strokeWidth="1" />
+      <text x="10" y="15" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">RF LAB: ANECHOIC CHAMBER</text>
+      <text x="10" y="27" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">50Ω MATCH &bull; DUAL-BAND PASS</text>
+    </g>
+  </svg>
+);
+
+export const RoboticsArt = () => (
+  <svg
+    viewBox="0 0 340 272"
+    className="gf-art w-full h-full"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Blueprint Deep Navy Background */}
+    <rect width="340" height="272" fill="#0B1322" />
+    <defs>
+      <pattern id="robot-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#182A45" strokeWidth="0.8" />
+      </pattern>
+    </defs>
+    <rect width="340" height="272" fill="url(#robot-grid)" />
+
+    {/* Top Tab Area Engineering Features */}
+    <g strokeLinecap="round" strokeLinejoin="round">
+      {/* 3-Phase FOC Drive Header */}
+      <path d="M16 26 L56 26" stroke="#38BDF8" strokeWidth="2" />
+      <text x="18" y="19" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">FOC_PWM_3PHASE</text>
+      <path d="M64 26 L100 26" stroke="#F59E0B" strokeWidth="2" />
+      <text x="66" y="19" fill="#FCD34D" fontSize="8" fontFamily="monospace" fontWeight="bold">U/V/W</text>
+      
+      {/* Encoder Telemetry Pill */}
+      <rect x="180" y="14" width="94" height="22" rx="4" fill="#0D1E38" stroke="#34D399" strokeWidth="1.2" />
+      <text x="188" y="29" fill="#34D399" fontSize="8" fontFamily="monospace" fontWeight="bold">ENCODER: 4096 CPR</text>
+    </g>
+
+    {/* Center 6-DOF Kinematic Robot Arm & Motor Control Schematic */}
+    <g transform="translate(40, 60)">
+      {/* Kinematic Arm Base & Joints */}
+      <rect x="20" y="110" width="48" height="16" rx="4" fill="#1E293B" stroke="#38BDF8" strokeWidth="1.5" />
+      <circle cx="44" cy="110" r="8" fill="#0F172A" stroke="#38BDF8" strokeWidth="1.8" />
+      <text x="38" y="114" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">J1</text>
+      
+      {/* Link 1 */}
+      <line x1="44" y1="102" x2="90" y2="40" stroke="#38BDF8" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="90" cy="40" r="7" fill="#0F172A" stroke="#F59E0B" strokeWidth="1.8" />
+      <text x="85" y="44" fill="#FCD34D" fontSize="8" fontFamily="monospace" fontWeight="bold">J2</text>
+
+      {/* Link 2 */}
+      <line x1="90" y1="40" x2="160" y2="60" stroke="#38BDF8" strokeWidth="2.6" strokeLinecap="round" />
+      <circle cx="160" cy="60" r="6" fill="#0F172A" stroke="#10B981" strokeWidth="1.8" />
+      <text x="156" y="64" fill="#34D399" fontSize="7" fontFamily="monospace" fontWeight="bold">J3</text>
+
+      {/* End Effector Vector */}
+      <line x1="160" y1="60" x2="195" y2="50" stroke="#A855F7" strokeWidth="2" strokeDasharray="3 3" />
+      <circle cx="195" cy="50" r="3.5" fill="#A855F7" />
+      <text x="175" y="42" fill="#C084FC" fontSize="7.5" fontFamily="monospace">TCP [X,Y,Z]</text>
+
+      {/* 3-Phase Inverter Bridge Signals (Right side) */}
+      <g transform="translate(140, 80)">
+        <rect x="0" y="0" width="110" height="52" rx="4" fill="#0A182E" stroke="#1E3A8A" strokeWidth="1.2" />
+        <text x="8" y="14" fill="#38BDF8" fontSize="7" fontFamily="monospace" fontWeight="bold">BLDC GATE DRIVE (40kHz)</text>
+        <path d="M10 26 L22 26 L22 36 L34 36 L34 26 L46 26" fill="none" stroke="#38BDF8" strokeWidth="1.2" />
+        <text x="52" y="33" fill="#60A5FA" fontSize="7" fontFamily="monospace">PHASE U</text>
+        <path d="M10 44 L16 44 L16 38 L28 38 L28 44 L40 44" fill="none" stroke="#F59E0B" strokeWidth="1.2" />
+        <text x="52" y="44" fill="#FCD34D" fontSize="7" fontFamily="monospace">PHASE V</text>
+      </g>
+    </g>
+
+    {/* Title Block */}
+    <g transform="translate(170, 226)">
+      <rect x="0" y="0" width="160" height="38" rx="4" fill="#0C1B33" stroke="#1E3A8A" strokeWidth="1" />
+      <text x="10" y="15" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">DWG: ROBOT-FOC-V3.1</text>
+      <text x="10" y="27" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">KALMAN FILTER &bull; 6-DOF FOC</text>
+    </g>
+  </svg>
+);
+
+export const AutomationArt = () => (
+  <svg
+    viewBox="0 0 340 272"
+    className="gf-art w-full h-full"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Blueprint Deep Navy Background */}
+    <rect width="340" height="272" fill="#081426" />
+    <defs>
+      <pattern id="auto-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#142642" strokeWidth="0.8" />
+      </pattern>
+    </defs>
+    <rect width="340" height="272" fill="url(#auto-grid)" />
+
+    {/* Top Tab Area Engineering Features */}
+    <g strokeLinecap="round" strokeLinejoin="round">
+      {/* 24VDC Industrial Bus Rail */}
+      <path d="M16 26 L80 26" stroke="#EF4444" strokeWidth="2.2" />
+      <text x="18" y="19" fill="#F87171" fontSize="8" fontFamily="monospace" fontWeight="bold">+24VDC_IND</text>
+      <path d="M90 26 L150 26" stroke="#38BDF8" strokeWidth="1.8" />
+      <text x="92" y="19" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">MODBUS_RS485</text>
+      
+      {/* SCADA Telemetry Pill */}
+      <rect x="180" y="14" width="94" height="22" rx="4" fill="#0B1D36" stroke="#10B981" strokeWidth="1.2" />
+      <text x="188" y="29" fill="#34D399" fontSize="8" fontFamily="monospace" fontWeight="bold">IIoT: CANopen &bull; 1Mb/s</text>
+    </g>
+
+    {/* Center PLC Ladder Logic & Industrial Control Schematic */}
+    <g transform="translate(45, 66)">
+      {/* Power Rail Left & Right */}
+      <line x1="0" y1="0" x2="0" y2="140" stroke="#EF4444" strokeWidth="2.2" />
+      <line x1="250" y1="0" x2="250" y2="140" stroke="#38BDF8" strokeWidth="2.2" />
+
+      {/* Rung 001: Start/Stop Motor Latch */}
+      <g transform="translate(0, 24)">
+        <line x1="0" y1="0" x2="30" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+        {/* Normally Open Contact (PB_START) */}
+        <line x1="30" y1="-8" x2="30" y2="8" stroke="#38BDF8" strokeWidth="1.6" />
+        <line x1="40" y1="-8" x2="40" y2="8" stroke="#38BDF8" strokeWidth="1.6" />
+        <text x="24" y="-12" fill="#38BDF8" fontSize="7" fontFamily="monospace">PB_START</text>
+        <line x1="40" y1="0" x2="90" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+        
+        {/* Normally Closed Contact (ESTOP) */}
+        <line x1="90" y1="-8" x2="90" y2="8" stroke="#EF4444" strokeWidth="1.6" />
+        <line x1="100" y1="-8" x2="100" y2="8" stroke="#EF4444" strokeWidth="1.6" />
+        <line x1="88" y1="8" x2="102" y2="-8" stroke="#EF4444" strokeWidth="1.4" />
+        <text x="86" y="-12" fill="#F87171" fontSize="7" fontFamily="monospace">E_STOP</text>
+        <line x1="100" y1="0" x2="180" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+
+        {/* Output Coil (M1_CONTACTOR) */}
+        <path d="M180 -8 A 8 8 0 0 1 180 8" fill="none" stroke="#10B981" strokeWidth="1.8" />
+        <path d="M194 -8 A 8 8 0 0 0 194 8" fill="none" stroke="#10B981" strokeWidth="1.8" />
+        <text x="174" y="-12" fill="#34D399" fontSize="7" fontFamily="monospace">M1_RUN</text>
+        <line x1="194" y1="0" x2="250" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+      </g>
+
+      {/* Rung 002: 4-20mA Sensor & VFD Analog Loop */}
+      <g transform="translate(0, 80)">
+        <line x1="0" y1="0" x2="40" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+        <rect x="40" y="-14" width="70" height="28" rx="3" fill="#0C1B33" stroke="#F59E0B" strokeWidth="1.2" />
+        <text x="46" y="-1" fill="#FCD34D" fontSize="7" fontFamily="monospace">4-20mA ADC</text>
+        <text x="46" y="9" fill="#94A3B8" fontSize="6" fontFamily="monospace">PRESSURE SENSOR</text>
+        <line x1="110" y1="0" x2="150" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+        
+        {/* VFD Modbus RS485 Block */}
+        <rect x="150" y="-14" width="65" height="28" rx="3" fill="#0C1B33" stroke="#38BDF8" strokeWidth="1.2" />
+        <text x="156" y="-1" fill="#38BDF8" fontSize="7" fontFamily="monospace">VFD DRIVE</text>
+        <text x="156" y="9" fill="#93C5FD" fontSize="6" fontFamily="monospace">MODBUS RTU</text>
+        <line x1="215" y1="0" x2="250" y2="0" stroke="#94A3B8" strokeWidth="1.4" />
+      </g>
+    </g>
+
+    {/* Title Block */}
+    <g transform="translate(170, 226)">
+      <rect x="0" y="0" width="160" height="38" rx="4" fill="#0C1B33" stroke="#1E3A8A" strokeWidth="1" />
+      <text x="10" y="15" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">DWG: IND-AUTO-V4.0</text>
+      <text x="10" y="27" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">IEC 61131-3 &bull; PLC & SCADA</text>
+    </g>
+  </svg>
+);
+
 export const ART_COMPONENTS = {
   schematic: SchematicArt,
   pcb: PcbTracesArt,
+  rf: RfAntennaArt,
   firmware: FirmwareSignalArt,
   fpga: FpgaLogicArt,
+  robotics: RoboticsArt,
   mechanical: MechanicalCadArt,
+  automation: AutomationArt,
   manufacturing: ManufacturingSmtArt,
 };
 
 export const ENGINEERING_ARTS = {
   schematic: <SchematicArt />,
   pcb: <PcbTracesArt />,
+  rf: <RfAntennaArt />,
   firmware: <FirmwareSignalArt />,
   fpga: <FpgaLogicArt />,
+  robotics: <RoboticsArt />,
   mechanical: <MechanicalCadArt />,
+  automation: <AutomationArt />,
   manufacturing: <ManufacturingSmtArt />,
 };
 

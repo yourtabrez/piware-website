@@ -18,6 +18,15 @@ export const capabilities = [
     stat: "Up to 16 Layers"
   },
   {
+    id: "antenna-rf",
+    title: "Antenna & RF Engineering",
+    tagline: "Antenna design, RF simulation & impedance matching",
+    description: "Full RF development lifecycle: custom antenna design and development, RF circuit simulation, RF PCB layout and 50Ω impedance matching, antenna integration, RF front-end and filter design, antenna tuning and matching networks, and RF testing and performance validation.",
+    tags: ["Antenna Design & Development", "RF Circuit Simulation", "RF PCB & Impedance Matching", "Antenna Integration", "RF Front-End & Filter Design", "Tuning Networks", "RF Testing & Validation"],
+    icon: "Radio",
+    stat: "Sub-6GHz & 24GHz"
+  },
+  {
     id: "firmware-development",
     title: "Firmware Engineering",
     tagline: "Embedded C/C++, RTOS, device drivers & OTA infrastructure",
@@ -36,6 +45,15 @@ export const capabilities = [
     stat: "Nanosecond Latency"
   },
   {
+    id: "robotics-systems",
+    title: "Robotics & Intelligent Systems",
+    tagline: "Custom robotics, motion control & edge AI integration",
+    description: "Custom robotic systems, embedded robotics and control architectures, BLDC and servo motor control, sensor integration and multi-sensor fusion, navigation and positioning systems, robotic electronics and controller design, wireless robotics and telemetry, and computer vision with edge-AI integration.",
+    tags: ["Custom Robotic Systems", "Embedded Control Systems", "BLDC & Servo Motor Control", "Sensor Integration & Fusion", "Navigation & Positioning", "Robotic Controller Design", "Wireless Telemetry", "Edge-AI & Computer Vision"],
+    icon: "Bot",
+    stat: "Field-Oriented Control"
+  },
+  {
     id: "mechanical-engineering",
     title: "Mechanical & Enclosure",
     tagline: "Industrial design, thermal analysis & DFM-ready CAD",
@@ -45,22 +63,13 @@ export const capabilities = [
     stat: "IP67 Ingress Ready"
   },
   {
-    id: "companion-apps",
-    title: "Companion Apps & UI",
-    tagline: "Cross-platform mobile apps & intuitive operator dashboards",
-    description: "Seamless Bluetooth LE, Wi-Fi, and USB-connected mobile (iOS/Android) and desktop companion apps for device provisioning, diagnostics, telemetry visualization, and field calibration.",
-    tags: ["BLE / WiFi Sync", "iOS & Android", "Desktop Diagnostics", "Real-time Telemetry"],
-    icon: "Smartphone",
-    stat: "Cross-Platform"
-  },
-  {
-    id: "cloud-integration",
-    title: "Cloud IoT & Telemetry",
-    tagline: "Device fleet management, MQTT/TLS & cloud integrations",
-    description: "Scalable cloud device backends using AWS IoT Core, Azure IoT, or custom MQTT brokers for live telemetry streaming, remote fleet diagnostics, and over-the-air firmware deployments.",
-    tags: ["AWS IoT / Azure", "MQTT over TLS", "Fleet Telemetry", "REST / GraphQL APIs"],
-    icon: "Cloud",
-    stat: "End-to-End Encrypted"
+    id: "industrial-automation",
+    title: "Industry 4.0 & Industrial Automation",
+    tagline: "PLC programming, SCADA, HMI & IIoT telemetry",
+    description: "PLC programming and integration, SCADA system development, HMI design and development, industrial control panel design, VFD and motor control integration, Industrial IoT (IIoT), Modbus, CAN, RS-485 and industrial protocols, machine monitoring and data acquisition, production monitoring and dashboards, and remote monitoring with predictive maintenance.",
+    tags: ["PLC Programming (IEC 61131)", "SCADA Development", "HMI Design", "Control Panel Design", "VFD & Motor Control", "Industrial IoT (IIoT)", "Modbus / CAN / RS-485", "Machine Monitoring", "Predictive Maintenance"],
+    icon: "Factory",
+    stat: "IEC 61131-3 & IIoT"
   },
   {
     id: "manufacturing-support",
@@ -72,4 +81,3 @@ export const capabilities = [
     stat: "1 to 100k+ Units"
   }
 ];
-

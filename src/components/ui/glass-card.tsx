@@ -52,7 +52,7 @@ export const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
         <div
           ref={ref}
           className={cn(
-            "group h-full w-full min-h-[420px] [perspective:1000px] select-none",
+            "group h-full w-full min-h-[440px] [perspective:1000px] select-none",
             className
           )}
           {...props}
@@ -109,31 +109,31 @@ export const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
               <div className="pr-12 sm:pr-14">
                 {/* Step Subtitle / Eyebrow */}
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-600 bg-blue-50/80 px-2.5 py-0.5 rounded-full border border-blue-100/80">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 bg-blue-50/90 px-2.5 py-0.5 rounded-full border border-blue-200/80">
                     STAGE {step || "01"}
                   </span>
                   {badgeText && (
-                    <span className="text-[10px] font-mono text-slate-500 font-medium">
+                    <span className="text-xs font-mono text-slate-500 font-semibold">
                       {badgeText}
                     </span>
                   )}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-snug group-hover:text-black transition-colors mb-1.5">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight leading-snug group-hover:text-black transition-colors mb-2">
                   {title}
                 </h3>
 
                 {/* Summary */}
                 {summary && (
-                  <p className="text-xs font-mono text-slate-500 font-semibold mb-3">
+                  <p className="text-xs sm:text-sm font-mono text-slate-600 font-bold mb-3">
                     {summary}
                   </p>
                 )}
 
                 {/* Description */}
                 {description && (
-                  <p className="text-xs text-slate-600 leading-relaxed mb-5">
+                  <p className="text-sm text-slate-700 leading-relaxed mb-5 font-normal">
                     {description}
                   </p>
                 )}
@@ -141,24 +141,24 @@ export const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
 
               {/* Deliverables / Key Outputs Layer (Z: 40px) */}
               {deliverables && deliverables.length > 0 && (
-                <div className="pt-4 border-t border-slate-200/70 [transform-style:preserve-3d] [transform:translate3d(0,0,15px)]">
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold">
+                <div className="pt-4 border-t border-slate-200/80 [transform-style:preserve-3d] [transform:translate3d(0,0,15px)]">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-mono uppercase tracking-wider text-slate-600 font-bold">
                       Key Outputs & Deliverables:
                     </span>
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                   </div>
 
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {deliverables.map((deliv, i) => (
                       <li
                         key={i}
-                        className="text-xs text-slate-700 flex items-start gap-2 group/item"
+                        className="text-xs sm:text-sm text-slate-800 flex items-start gap-2.5 group/item font-medium"
                       >
-                        <span className="text-blue-500 text-[11px] font-bold shrink-0 mt-0.5">
+                        <span className="text-blue-600 text-sm font-black shrink-0 leading-none mt-0.5">
                           &bull;
                         </span>
-                        <span className="leading-tight group-hover/item:text-slate-900 transition-colors">
+                        <span className="leading-snug group-hover/item:text-slate-900 transition-colors">
                           {deliv}
                         </span>
                       </li>

@@ -95,7 +95,7 @@ export default function WhyPiwareSection() {
                   <h3 className="text-lg font-extrabold text-slate-900 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-700 leading-relaxed">
                     {item.description}
                   </p>
                 </div>

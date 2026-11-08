@@ -509,7 +509,7 @@ Below is the complete chronological log of engineering enhancements and transfor
 
 ### Milestone 14: Site-Wide Modern In-Transitions & Orchestrated Scrolling Rhythm
 - Audited every section and integrated Framer Motion viewport-triggered in-transitions (`useInView({ once: true, margin: "-70px" })`) across previously static components:
-  - **Capabilities Section ([`CapabilitiesSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/CapabilitiesSection.jsx))**: Section header slide-up (`y: 24`) and cascading 6-folder stagger (`staggerChildren: 0.09, delayChildren: 0.15`) with spring elevation.
+  - **Capabilities Section ([`CapabilitiesSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/CapabilitiesSection.jsx))**: Section header slide-up (`y: 24`) and cascading folder stagger (`staggerChildren: 0.09, delayChildren: 0.15`) with spring elevation.
   - **Hardware Lifecycle Section ([`TimelineSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TimelineSection.jsx))**: Coordinated entry with left stage selector slide-in (`x: -24`), right detail enclosure slide-in (`x: 24`), and fluid `AnimatePresence` stage-switch transitions.
   - **Process Section ([`ProcessSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/ProcessSection.jsx))**: Synchronized header entrance preceding the 7-stage 3D glass card cascade.
   - **Target Industries Section ([`IndustriesSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/IndustriesSection.jsx))**: Staggered cascading reveal (`staggerChildren: 0.06`) for all 10 industry cards with smooth hover lifts (`y: -4`).
@@ -518,13 +518,36 @@ Below is the complete chronological log of engineering enhancements and transfor
   - **Engineering Tech Stack Section ([`TechStackSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TechStackSection.jsx))**: Smooth category filter bar slide-in and dynamic category-swapping badge stagger (`staggerChildren: 0.025, scale: 0.92 -> 1.0`).
   - **Technical Consultation Section ([`ConsultationSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/ConsultationSection.jsx))**: Header entrance unified with the left briefing card and right Calendly chassis.
 
+### Milestone 15: Typography & Readability Overhaul, New Engineering Disciplines & Hero Copy Updates
+- **Typography & Visibility Overhaul**:
+  - Replaced ultra-thin font weight in [`src/index.css`](file:///f:/Owais/piware-website/src/index.css) and [`tailwind.config.js`](file:///f:/Owais/piware-website/tailwind.config.js) with standard weight (`font-weight: 400`) and optimized screen legibility (`text-rendering: optimizeLegibility`), resolving website owner feedback (*"Typography looks small improve visibility and readability"* / *"easily padhna mushkil h"*).
+  - Scaled up 3D Process cards in [`glass-card.tsx`](file:///f:/Owais/piware-website/src/components/ui/glass-card.tsx): title to `text-xl sm:text-2xl`, summary to `text-sm font-bold text-slate-700`, description to `text-sm text-slate-700`, and deliverables list to `text-sm text-slate-800 font-medium`.
+  - Scaled up Lifecycle stage-gate section in [`TimelineSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/TimelineSection.jsx): stage names to `text-base font-extrabold`, headline to `text-lg sm:text-xl font-bold`, objective to `text-base text-slate-700`, and deliverable cards to `text-sm text-slate-900 font-medium`.
+- **Hero Section 3-Line Kinetic Headline & Value Proposition**:
+  - Implemented the official 3-line kinetic headline in [`HeroSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/HeroSection.jsx):
+    1. *Engineering Ideas Into Reality.*
+    2. *From Concept to Production.*
+    3. *Without Guesswork.*
+  - Updated hero editorial paragraph to: *"We design, develop and deliver advanced engineering solutions across electronics, embedded systems, RF, robotics and industrial automation."*
+  - Updated capability tags to include *Antenna & RF Engineering*, *Robotics & Intelligent Systems*, and *Industry 4.0 & Automation*.
+- **Engineering Disciplines Expansion (3x3 Grid & 9 Interactive Dossiers)**:
+  - Added **Antenna & RF Engineering** (Antenna design, RF simulation, 50Ω matching, filter front-ends, tuning, chamber testing).
+  - Added **Robotics & Intelligent Systems** (BLDC/servo FOC control, sensor fusion, 6-DOF kinematics, navigation, edge-AI vision).
+  - Added **Industry 4.0 & Industrial Automation** (PLC IEC 61131-3, SCADA/HMI, control panels, VFDs, Modbus/CAN, IIoT predictive maintenance).
+  - Designed bespoke authentic engineering vector artwork components in [`glass-folder-cards.jsx`](file:///f:/Owais/piware-website/src/components/ui/glass-folder-cards.jsx) (`RfAntennaArt`, `RoboticsArt`, `AutomationArt`).
+  - Synchronized data in [`src/data/capabilities.js`](file:///f:/Owais/piware-website/src/data/capabilities.js) and navigation links in [`Footer.jsx`](file:///f:/Owais/piware-website/src/components/layout/Footer.jsx).
+- **Phone Number Purge**:
+  - Completely removed secondary phone `+91 99244 94036` from [`companyInfo.js`](file:///f:/Owais/piware-website/src/data/companyInfo.js) and documentation, leaving only `+91 76001 00174`.
+- **IDE & Development Environment Polish**:
+  - Configured [`.vscode/settings.json`](file:///f:/Owais/piware-website/.vscode/settings.json) with `css.lint.unknownAtRules: "ignore"` to eliminate CSS linter warnings on `@tailwind` directives.
+  - Added [`.vscode/extensions.json`](file:///f:/Owais/piware-website/.vscode/extensions.json) recommending the official Tailwind CSS IntelliSense extension.
+
 ---
 
 ## 📞 Studio Contact & Coordinates
 
 - **Studio Email**: [h@piware.in](mailto:h@piware.in)
 - **Primary Phone**: [+91 76001 00174](tel:+917600100174)
-- **Secondary Phone**: [+91 99244 94036](tel:+919924494036)
 - **Studio Coordinates**: `23.0225° N, 72.5714° E` (Ahmedabad, Gujarat, India)
 - **Physical Address**: C-12, Ground Floor, Sumel-10, B/h Kalupur Railway Station, Saraspur, Ahmedabad, Gujarat, India - 380018
 - **Online Consultation**: [calendly.com/piwareengineering](https://calendly.com/piwareengineering)

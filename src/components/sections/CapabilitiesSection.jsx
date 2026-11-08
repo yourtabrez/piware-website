@@ -2,11 +2,14 @@ import React, { useState, useRef } from 'react';
 import { 
   Cpu, 
   Layers, 
+  Radio, 
   Binary, 
   Boxes, 
+  Bot, 
   Box, 
+  Gauge, 
   Factory, 
-  MousePointerClick
+  MousePointerClick 
 } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import Container from '../common/Container';
@@ -66,6 +69,20 @@ export default function CapabilitiesSection() {
       ],
     },
     {
+      id: "antenna-rf",
+      label: "Antenna & RF Engineering",
+      meta: "Sub-6GHz & 24GHz",
+      art: "rf", // Smith Chart & S11 Return Loss Waveform Plot
+      spec: "50Ω Matched • Anechoic Validated",
+      description: "Antenna design, RF circuit simulation, impedance matching layout, filter front-ends, antenna tuning, and chamber validation.",
+      icon: Radio,
+      files: [
+        { name: "Antenna_Return_Loss_S11.s2p", meta: "VSWR < 1.5 · 2.4/5.8GHz" },
+        { name: "RF_Matching_Smith_Chart.sim", meta: "L-C Pi Network Tuned" },
+        { name: "Chamber_Radiation_Pattern.drw", meta: "Anechoic Chamber Validated" },
+      ],
+    },
+    {
       id: "firmware-rtos",
       label: "Firmware Engineering",
       meta: "RTOS & Secure Boot",
@@ -94,6 +111,20 @@ export default function CapabilitiesSection() {
       ],
     },
     {
+      id: "robotics-systems",
+      label: "Robotics & Intelligent Systems",
+      meta: "FOC & Sensor Fusion",
+      art: "robotics", // Kinematic 6-DOF Arm & 3-Phase Inverter Bridge
+      spec: "FOC Motor Drive • Edge AI",
+      description: "Custom robotics, motion control architectures, 3-phase BLDC/servo drives, sensor fusion (IMU/LiDAR), navigation, and vision edge-AI.",
+      icon: Bot,
+      files: [
+        { name: "BLDC_FOC_Motor_Controller.c", meta: "Sensorless FOC · 40kHz PWM" },
+        { name: "Sensor_Fusion_Kalman_Filter.m", meta: "6-DOF IMU + Odometry" },
+        { name: "EdgeAI_Object_Detection.onnx", meta: "NPU Accelerated · 30 FPS" },
+      ],
+    },
+    {
       id: "mechanical-cad",
       label: "Mechanical & Enclosure",
       meta: "CAD, DFM & IP67",
@@ -105,6 +136,20 @@ export default function CapabilitiesSection() {
         { name: "Enclosure_Master_3D.step", meta: "SolidWorks · Tooling Ready" },
         { name: "Thermal_FEA_Dissipation.sim", meta: "Chamber Validated" },
         { name: "IP67_Gasket_Seal_Spec.pdf", meta: "Submersible Ingress" },
+      ],
+    },
+    {
+      id: "industrial-automation",
+      label: "Industry 4.0 & Automation",
+      meta: "PLC, SCADA & IIoT",
+      art: "automation", // PLC Ladder Logic, RS-485, 4-20mA Sensor Loop
+      spec: "IEC 61131-3 • Modbus / CAN",
+      description: "Rugged industrial automation: PLC programming, SCADA/HMI interfaces, control panel design, VFDs, Modbus/CAN, and predictive maintenance.",
+      icon: Gauge,
+      files: [
+        { name: "PLC_Ladder_Logic_Master.iec", meta: "IEC 61131-3 · Structured Text" },
+        { name: "SCADA_HMI_Telemetry.ui", meta: "Modbus TCP & MQTT Broker" },
+        { name: "Industrial_Panel_Wiring.dwg", meta: "24VDC Distribution & Relays" },
       ],
     },
     {
@@ -209,7 +254,7 @@ export default function CapabilitiesSection() {
                 <div className="w-full bg-slate-50/90 border border-slate-200/80 rounded-2xl p-4 shadow-sm group-hover:border-slate-300 group-hover:bg-white transition-all">
                   <div className="flex items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-md bg-white border border-slate-200 flex items-center justify-center text-slate-900">
+                      <div className="w-6 h-6 rounded-md bg-white border border-slate-200 flex items-center justify-center text-slate-900 shrink-0">
                         <IconComp className="w-3.5 h-3.5" />
                       </div>
                       <span className="text-xs font-mono font-bold text-slate-900">
@@ -218,7 +263,7 @@ export default function CapabilitiesSection() {
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                     {dossier.description}
                   </p>
                 </div>

@@ -6,7 +6,6 @@ export const companyInfo = {
   email: "h@piware.in",
   phones: [
     { label: "+91 76001 00174", href: "tel:+917600100174" },
-    { label: "+91 99244 94036", href: "tel:+919924494036" },
   ],
   address: "C-12, Ground Floor, Sumel-10, B/h Kalupur Railway station, Saraspur, Ahmedabad, Gujarat, India - 380018",
   calendlyUrl: "https://calendly.com/piwareengineering",

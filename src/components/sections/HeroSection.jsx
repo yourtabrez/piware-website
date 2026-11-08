@@ -11,10 +11,10 @@ export default function HeroSection() {
   const capabilityTags = [
     "Hardware Architecture",
     "High-Speed Multilayer PCB",
+    "Antenna & RF Engineering",
     "Deterministic Firmware",
-    "FPGA HDL",
-    "DFM Mechanical CAD",
-    "IoT Cloud & Telemetry",
+    "Robotics & Intelligent Systems",
+    "Industry 4.0 & Automation",
     "Turnkey Production"
   ];
 
@@ -104,16 +104,22 @@ export default function HeroSection() {
               {/* Kinetic Words Pull-Up Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.08] mb-4 sm:mb-5">
                 <WordsPullUp 
-                  text="From Idea to Shipped Hardware." 
+                  text="Engineering Ideas Into Reality." 
                   className="text-slate-900"
                   showAsterisk
-                  delay={0.35}
+                  delay={0.3}
+                />
+                <br />
+                <WordsPullUp 
+                  text="From Concept to Production." 
+                  className="text-slate-900"
+                  delay={0.45}
                 />
                 <br />
                 <WordsPullUp 
                   text="Without Guesswork." 
-                  className="text-slate-500 font-normal"
-                  delay={0.55}
+                  className="text-blue-600 font-bold"
+                  delay={0.6}
                 />
               </h1>
 
@@ -121,11 +127,10 @@ export default function HeroSection() {
               <motion.p 
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
-                className="text-sm sm:text-base lg:text-base xl:text-lg text-slate-600 leading-relaxed max-w-xl mb-5 sm:mb-6"
+                transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-xl mb-5 sm:mb-6 font-normal"
               >
-                Piware designs, prototypes, and manufactures production-grade electronic devices for ambitious startups and OEMs. 
-                Hardware, firmware, and mechanical engineering executed by the same elite team that ships it.
+                We design, develop and deliver advanced engineering solutions across electronics, embedded systems, RF, robotics and industrial automation.
               </motion.p>
 
               {/* Capability Tag Cloud */}

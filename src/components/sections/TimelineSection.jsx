@@ -87,7 +87,7 @@ export default function TimelineSection() {
                   }`}
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center font-mono font-bold text-sm ${
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-mono font-bold text-sm shrink-0 ${
                       isActive 
                         ? 'bg-white text-slate-900' 
                         : 'bg-slate-100 text-slate-700 group-hover:bg-slate-200'
@@ -95,10 +95,10 @@ export default function TimelineSection() {
                       {stage.stage}
                     </div>
                     <div>
-                      <div className={`font-bold text-sm ${isActive ? 'text-white' : 'text-slate-900'}`}>
+                      <div className={`font-extrabold text-base ${isActive ? 'text-white' : 'text-slate-900'}`}>
                         {stage.name}
                       </div>
-                      <div className={`text-xs font-mono ${isActive ? 'text-slate-300' : 'text-slate-500'}`}>
+                      <div className={`text-xs font-mono font-medium mt-0.5 ${isActive ? 'text-slate-300' : 'text-slate-500'}`}>
                         {stage.timeline} &bull; {stage.batch}
                       </div>
                     </div>
@@ -114,7 +114,7 @@ export default function TimelineSection() {
             {/* Total Timeline Banner */}
             <div className="mt-3 p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
               <Clock className="w-5 h-5 text-slate-700 flex-shrink-0" />
-              <div className="text-xs text-slate-600 leading-snug">
+              <div className="text-sm text-slate-700 leading-snug">
                 <strong className="text-slate-900 font-bold">Typical End-to-End Delivery:</strong> 8 to 20 Weeks depending on custom silicon, enclosure tooling, and regulatory certifications.
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function TimelineSection() {
           >
             
             {/* Stage Detail Card with Smooth Stage-Switch Transition */}
-            <div className="p-7 rounded-2xl bg-white border border-slate-200 shadow-card relative overflow-hidden">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-card relative overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentStage.stage}
@@ -141,19 +141,19 @@ export default function TimelineSection() {
                   {/* Stage Top Bar */}
                   <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-100 mb-5">
                     <div>
-                      <span className="text-xs font-mono uppercase tracking-wider text-slate-500 font-semibold">
+                      <span className="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold">
                         Stage {selectedStageIndex + 1} of 5 &bull; {currentStage.stage}
                       </span>
-                      <h3 className="text-2xl font-extrabold text-slate-900 mt-1">
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
                         {currentStage.name}
                       </h3>
                     </div>
 
-                    <div className="flex items-center gap-2 font-mono text-xs">
-                      <span className="px-3 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-medium">
+                    <div className="flex items-center gap-2 font-mono text-xs sm:text-sm">
+                      <span className="px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-800 font-semibold">
                         ⏱ {currentStage.timeline}
                       </span>
-                      <span className="px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold">
+                      <span className="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold">
                         📦 {currentStage.batch}
                       </span>
                     </div>
@@ -161,27 +161,27 @@ export default function TimelineSection() {
 
                   {/* Stage Headline & Objective */}
                   <div className="mb-6">
-                    <h4 className="text-base font-bold text-slate-900 mb-2">
+                    <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-2.5">
                       {currentStage.headline}
                     </h4>
-                    <p className="text-sm text-slate-600 leading-relaxed">
+                    <p className="text-base text-slate-700 leading-relaxed font-normal">
                       {currentStage.objective}
                     </p>
                   </div>
 
                   {/* Key Deliverables */}
                   <div>
-                    <span className="text-xs font-mono uppercase text-slate-500 tracking-wider font-semibold mb-3 block">
+                    <span className="text-xs font-mono uppercase text-slate-600 tracking-wider font-bold mb-3.5 block">
                       Milestone Deliverables:
                     </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {currentStage.deliverables.map((deliv) => (
                         <div 
                           key={deliv}
-                          className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/70 text-xs text-slate-800"
+                          className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 font-medium leading-snug"
                         >
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                          <span className="font-medium">{deliv}</span>
+                          <span>{deliv}</span>
                         </div>
                       ))}
                     </div>
@@ -218,7 +218,7 @@ export default function TimelineSection() {
             {/* Mobile Delivery Estimation Banner */}
             <div className="lg:hidden p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-3">
               <Clock className="w-5 h-5 text-slate-700 flex-shrink-0" />
-              <div className="text-xs text-slate-600 leading-snug">
+              <div className="text-sm text-slate-700 leading-snug">
                 <strong className="text-slate-900 font-bold">Typical End-to-End Delivery:</strong> 8 to 20 Weeks depending on custom silicon, enclosure tooling, and regulatory certifications.
               </div>
             </div>
