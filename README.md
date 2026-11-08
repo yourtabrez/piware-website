@@ -24,15 +24,17 @@
 
 ## 📌 Executive Overview
 
-**Piware Engineering** is a founder-led electronics design and embedded systems product studio headquartered in Ahmedabad, Gujarat, India (`23.0225° N, 72.5714° E`). We architect, prototype, and manufacture production-ready electronic devices for high-growth startups and original equipment manufacturers (OEMs) worldwide.
+**Piware Engineering** is a founder-led electronics design, embedded systems, and intelligent AI product studio headquartered in Ahmedabad, Gujarat, India (`23.0225° N, 72.5714° E`). We architect, prototype, and manufacture production-ready electronic devices, intelligent systems, and enterprise full-stack AI software for high-growth startups and OEMs worldwide.
 
-Unlike fragmented agencies that outsource layout or firmware, our full-stack engineering team takes single-threaded ownership across the entire hardware lifecycle:
-- **Electrical Architecture & High-Speed Multilayer PCB Layout** (Up to 16 layers, complex HDI, flex-rigid, RF impedance matching, strict EMI/EMC compliance).
+Unlike fragmented agencies that outsource layout, firmware, or software, our unified engineering team takes single-threaded ownership across the entire product lifecycle:
+- **Electrical Architecture & High-Speed Multilayer PCB Layout** (Up to 16 layers, complex HDI, flex-rigid, 50Ω impedance matching, strict EMI/EMC compliance).
+- **Antenna & RF Engineering** (Antenna design, RF circuit simulation, impedance matching networks, filter front-ends, tuning, anechoic chamber testing).
 - **Deterministic Embedded Firmware & RTOS** (Bare-metal C/C++, FreeRTOS, Zephyr, fault-tolerant state machines, cryptographic secure bootloaders, dual-bank OTA).
-- **FPGA & High-Throughput Digital Logic** (AMD Xilinx, Intel Altera, Lattice; VHDL/Verilog DSP pipelines, high-speed PCIe/transceiver IP).
-- **Industrial Design & Mechanical Enclosures** (SolidWorks, Autodesk Fusion, thermal FEA dissipation, IP67 submersible ingress protection, DFM/DFA).
-- **Companion Mobile & Desktop Applications** (Seamless BLE, Wi-Fi, USB operator dashboards for iOS, Android, macOS, and Windows).
-- **Cloud IoT Fleet Infrastructure** (AWS IoT Core, Azure IoT Hub, secure MQTT over TLS, edge-to-cloud telemetry pipelines).
+- **Robotics & Intelligent Motion Control** (Field-Oriented Control (FOC), 3-phase BLDC/servo drives, 6-DOF kinematics, multi-sensor fusion, edge-AI computer vision).
+- **Agentic AI & Multi-Agent Orchestration** (LangGraph state machines, multi-agent supervisor architectures, structured tool-calling, self-healing execution loops).
+- **Enterprise RAG & Document Intelligence** (Supabase pgvector, 3072-dimensional embeddings, PyMuPDF local parsing, hybrid semantic search, zero-hallucination citations).
+- **Full-Stack Web & AI SaaS Platforms** (Next.js, React, TypeScript, Python FastAPI, PostgreSQL Row Level Security (RLS), Docker containerization, n8n automation).
+- **Industry 4.0 & Industrial Automation** (PLC IEC 61131-3 programming, SCADA/HMI dashboards, industrial control panels, VFDs, Modbus, CAN, RS-485 protocols).
 - **Turnkey Volume Manufacturing** (DFM/DFT design reviews, custom automated bed-of-nails FCT jigs, supply chain risk audits, pilot runs to 100k+ mass production).
 
 ---
@@ -541,6 +543,28 @@ Below is the complete chronological log of engineering enhancements and transfor
 - **IDE & Development Environment Polish**:
   - Configured [`.vscode/settings.json`](file:///f:/Owais/piware-website/.vscode/settings.json) with `css.lint.unknownAtRules: "ignore"` to eliminate CSS linter warnings on `@tailwind` directives.
   - Added [`.vscode/extensions.json`](file:///f:/Owais/piware-website/.vscode/extensions.json) recommending the official Tailwind CSS IntelliSense extension.
+
+### Milestone 16: Enterprise AI & Full-Stack Studio Expansion (Agentic AI, RAG, SaaS Platforms & Automation)
+- **Unified 12-Dossier Modular Catalog with Domain Filter Tabs ([`CapabilitiesSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/CapabilitiesSection.jsx))**:
+  - Expanded interactive physical folders into a 12-discipline catalog arranged in a clean 4×3 grid on desktop and responsive swipe layout on mobile.
+  - Implemented interactive domain filter tabs:
+    - `All Disciplines (12)`: Complete studio catalog.
+    - `Hardware & RF (4)`: Hardware Architecture, High-Speed PCB, Antenna & RF, Mechanical CAD.
+    - `Intelligent Systems & AI (4)`: Agentic AI & Autonomous Agents, Enterprise RAG Systems, Robotics & Motion Control, Firmware Engineering.
+    - `Cloud, Software & Mfg (4)`: Full-Stack SaaS Platforms, Industry 4.0 & Automation, FPGA Digital Logic, Turnkey Volume Manufacturing.
+- **Three New Bespoke Engineering Vector Artworks ([`glass-folder-cards.jsx`](file:///f:/Owais/piware-website/src/components/ui/glass-folder-cards.jsx))**:
+  - **`AgenticAiArt`**: Interactive LangGraph state machine with cyclic graph loops, Supervisor agent routing, Tool Runner nodes, and JSON function-calling schema validation.
+  - **`RagIntelligenceArt`**: Production RAG ingestion pipeline with PyMuPDF document parsing, 3072-dimensional vector space scatter plot, and Supabase pgvector HNSW cosine similarity clustering.
+  - **`FullStackSaasArt`**: Clean 3-tier cloud architecture diagram spanning Next.js/React TypeScript DOM tree, FastAPI async REST API router, and PostgreSQL tables with Row Level Security (RLS).
+- **Engineering Tech Stack Expansion ([`techStack.js`](file:///f:/Owais/piware-website/src/data/techStack.js))**:
+  - Added two dedicated categories to the interactive filter bar:
+    - `"Agentic AI & LLMs"`: LangGraph, LangChain, OpenAI APIs, Google Gemini, Supabase pgvector, PyMuPDF.
+    - `"Full-Stack & Cloud"`: Next.js, Python & FastAPI, PostgreSQL, Docker, n8n Automation, Tailwind CSS.
+- **Brand & Lifecycle Process Synchronization**:
+  - **Hero Section ([`HeroSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/HeroSection.jsx))**: Updated telemetry bar to `"STANDARDS: IPC-A-610 CLASS 3 • AGENTIC AI & EMBEDDED LABS"` and refined trust badge to `"Founder-Led Hardware & AI Engineering"`.
+  - **Lifecycle Process ([`process.js`](file:///f:/Owais/piware-website/src/data/process.js))**: Weaved AI system topology, cloud vs. edge inference latency modeling, async API pipelines, and autonomous agent evaluation into the 7-stage methodology.
+  - **Technical Consultation ([`ConsultationSection.jsx`](file:///f:/Owais/piware-website/src/components/sections/ConsultationSection.jsx))**: Expanded briefing items to evaluate AI model feasibility, cloud inference costs, and full-stack software architecture.
+  - **Footer Sitemap ([`Footer.jsx`](file:///f:/Owais/piware-website/src/components/layout/Footer.jsx))**: Updated direct links to include Agentic AI, Enterprise RAG, and Full-Stack SaaS platforms.
 
 ---
 

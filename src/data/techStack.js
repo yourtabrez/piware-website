@@ -1,5 +1,7 @@
 export const techCategories = [
   { id: "all", label: "All Technologies" },
+  { id: "ai", label: "Agentic AI & LLMs" },
+  { id: "fullstack", label: "Full-Stack & Cloud" },
   { id: "design", label: "EDA & Mechanical CAD" },
   { id: "silicon", label: "Microcontrollers & SoC" },
   { id: "fpga", label: "FPGA, Analog & Power" },
@@ -10,6 +12,22 @@ export const techCategories = [
 ];
 
 export const techItems = [
+  // Agentic AI & LLMs
+  { name: "LangGraph", category: "ai", isText: true, textBadge: "LangGraph", description: "Stateful multi-agent cyclic graph orchestration" },
+  { name: "LangChain", category: "ai", isText: true, textBadge: "LangChain", description: "Agent memory, chains & tool-calling primitives" },
+  { name: "OpenAI APIs", category: "ai", isText: true, textBadge: "OpenAI", description: "GPT-4o, embeddings & structured function calling" },
+  { name: "Google Gemini", category: "ai", image: "/favicon/google-cloud-logo-fullcolor.svg", description: "Multimodal Gemini Live & Long-Context models" },
+  { name: "Supabase pgvector", category: "ai", isText: true, textBadge: "pgvector", description: "High-dimensional HNSW cosine vector search" },
+  { name: "PyMuPDF", category: "ai", isText: true, textBadge: "PyMuPDF", description: "High-precision document parsing & text extraction" },
+
+  // Full-Stack & Automation
+  { name: "Next.js", category: "fullstack", isText: true, textBadge: "Next.js", description: "Full-stack React framework & server components" },
+  { name: "Python & FastAPI", category: "fullstack", isText: true, textBadge: "FastAPI", description: "High-performance async REST APIs & Pydantic" },
+  { name: "PostgreSQL", category: "fullstack", isText: true, textBadge: "PostgreSQL", description: "Relational modeling & Row Level Security (RLS)" },
+  { name: "Docker", category: "fullstack", isText: true, textBadge: "Docker", description: "Containerized microservices & reproducible envs" },
+  { name: "n8n Automation", category: "fullstack", isText: true, textBadge: "n8n", description: "Self-hosted event-driven webhook orchestration" },
+  { name: "Tailwind CSS", category: "fullstack", isText: true, textBadge: "Tailwind", description: "Utility-first design token styling system" },
+
   // EDA & Mechanical
   { name: "Altium Designer", category: "design", image: "/favicon/Altium_Logo.svg.webp", description: "Multilayer high-speed PCB layout & routing" },
   { name: "KiCad EDA", category: "design", image: "/favicon/kicad.svg", description: "Open-source schematic & board layout" },
@@ -61,4 +79,3 @@ export const techItems = [
   { name: "National Instruments", category: "test", isText: true, textBadge: "NI", description: "Automated DAQ & modular instrumentation" },
   { name: "LabVIEW", category: "test", isText: true, textBadge: "LabVIEW", description: "Custom automated manufacturing test fixtures (FCT)" },
 ];
-

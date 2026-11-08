@@ -21,7 +21,7 @@ export const companyInfo = {
   stats: [
     { value: 25, suffix: "+", label: "PCB Designs", description: "High-speed & multilayer" },
     { value: 15, suffix: "+", label: "Products Developed", description: "Concept to production" },
-    { value: 8, suffix: "+", label: "Tech Domains", description: "IoT, FPGA, RTOS, Cloud" },
+    { value: 8, suffix: "+", label: "Tech Domains", description: "Hardware, AI, RTOS, Cloud" },
     { value: 98, suffix: "%", label: "On-Time Delivery", description: "Milestone precision" },
   ]
 };

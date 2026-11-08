@@ -43,9 +43,9 @@ export const whyPiwarePoints = [
   },
   {
     title: "Cross-Domain Synergy",
-    description: "Hardware schematics, multilayer PCB, embedded firmware, mechanical CAD, and cloud connectivity designed simultaneously under one roof.",
+    description: "Hardware schematics, high-speed PCB, deterministic firmware, agentic AI systems, and cloud SaaS platforms engineered simultaneously under one roof.",
     icon: "Layers3",
-    metric: "Full-Stack Hardware"
+    metric: "Hardware to AI"
   },
   {
     title: "Long-Term Partnership",

@@ -48,20 +48,20 @@ export default function ConsultationSection() {
     {
       num: "01",
       icon: Cpu,
-      title: "Architecture & Silicon Feasibility",
-      description: "Review your system block diagram, component availability, lead times, and thermal/power budgets.",
+      title: "Architecture, Silicon & AI Feasibility",
+      description: "Review your system block diagram, MCU selection, cloud vs. edge latency, or AI agent workflow requirements.",
     },
     {
       num: "02",
       icon: DollarSign,
-      title: "Target Unit Cost (BOM) Modeling",
-      description: "Assess volume pricing thresholds, component risk alternatives, and tooling/fixture expenditure.",
+      title: "Target Unit Cost (BOM) & Cloud Modeling",
+      description: "Assess volume pricing thresholds, component risk alternatives, API cost models, and tooling expenditure.",
     },
     {
       num: "03",
       icon: TrendingUp,
       title: "Stage-Gate Delivery Roadmap",
-      description: "Map realistic milestones from breadboard POC to EVT/DVT spins and final turnkey factory transfer.",
+      description: "Map realistic milestones from breadboard POC to EVT/DVT spins and production-ready software transfer.",
     },
   ];
 

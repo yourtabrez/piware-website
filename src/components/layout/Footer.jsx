@@ -39,10 +39,11 @@ export default function Footer() {
     { name: "High-Speed Multilayer PCB (16-Layer)", href: "#capabilities" },
     { name: "Antenna & RF Engineering (50Ω)", href: "#capabilities" },
     { name: "Deterministic Firmware & RTOS", href: "#capabilities" },
-    { name: "FPGA & Digital Logic (DSP/AXI)", href: "#capabilities" },
     { name: "Robotics & Motion Control (FOC)", href: "#capabilities" },
+    { name: "Agentic AI & Multi-Agent Systems", href: "#capabilities" },
+    { name: "Enterprise RAG & Knowledge Systems", href: "#capabilities" },
+    { name: "Full-Stack Web & AI SaaS Platforms", href: "#capabilities" },
     { name: "Industry 4.0 & Industrial Automation", href: "#capabilities" },
-    { name: "DFM Mechanical CAD & IP67 Enclosure", href: "#capabilities" },
     { name: "Turnkey Volume Manufacturing", href: "#capabilities" },
   ];
 

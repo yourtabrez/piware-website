@@ -694,6 +694,226 @@ export const AutomationArt = () => (
   </svg>
 );
 
+export const AgenticAiArt = () => (
+  <svg
+    viewBox="0 0 340 272"
+    className="gf-art w-full h-full"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Blueprint Dark Navy Background */}
+    <rect width="340" height="272" fill="#081022" />
+    <defs>
+      <pattern id="agent-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#12223D" strokeWidth="0.8" />
+      </pattern>
+    </defs>
+    <rect width="340" height="272" fill="url(#agent-grid)" />
+
+    {/* Top Header Engineering Features */}
+    <g strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 26 L80 26" stroke="#38BDF8" strokeWidth="2" />
+      <text x="18" y="19" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">LANGGRAPH_STATE_V2</text>
+      <path d="M90 26 L150 26" stroke="#818CF8" strokeWidth="1.8" />
+      <text x="94" y="19" fill="#A5B4FC" fontSize="8" fontFamily="monospace" fontWeight="bold">CYCLIC_LOOP</text>
+
+      {/* Execution Status Badge */}
+      <rect x="180" y="14" width="104" height="22" rx="4" fill="#0B1A32" stroke="#34D399" strokeWidth="1.2" />
+      <text x="186" y="29" fill="#34D399" fontSize="7.5" fontFamily="monospace" fontWeight="bold">STATE: STEP 03/05 PASS</text>
+    </g>
+
+    {/* Center LangGraph Multi-Agent State Machine Architecture */}
+    <g transform="translate(40, 60)">
+      {/* Supervisor Agent Node (Center Top) */}
+      <rect x="80" y="8" width="100" height="34" rx="6" fill="#0D1E38" stroke="#38BDF8" strokeWidth="1.6" />
+      <circle cx="94" cy="25" r="4" fill="#38BDF8" />
+      <text x="104" y="23" fill="#FFFFFF" fontSize="8" fontFamily="monospace" fontWeight="bold">SUPERVISOR</text>
+      <text x="104" y="33" fill="#93C5FD" fontSize="6.5" fontFamily="monospace">ROUTER &bull; STATE</text>
+
+      {/* Directed Edge: Supervisor -> Researcher */}
+      <path d="M90 42 L45 80" stroke="#38BDF8" strokeWidth="1.4" strokeDasharray="3 3" />
+      <polygon points="43,82 50,78 47,85" fill="#38BDF8" />
+
+      {/* Directed Edge: Supervisor -> Tool Runner */}
+      <path d="M170 42 L215 80" stroke="#38BDF8" strokeWidth="1.4" strokeDasharray="3 3" />
+      <polygon points="217,82 213,85 210,78" fill="#38BDF8" />
+
+      {/* Researcher / RAG Agent Node (Bottom Left) */}
+      <rect x="0" y="82" width="90" height="34" rx="6" fill="#0B1B30" stroke="#818CF8" strokeWidth="1.4" />
+      <circle cx="14" cy="99" r="4" fill="#818CF8" />
+      <text x="24" y="97" fill="#E0E7FF" fontSize="7.5" fontFamily="monospace" fontWeight="bold">RESEARCHER</text>
+      <text x="24" y="107" fill="#A5B4FC" fontSize="6.5" fontFamily="monospace">RAG &bull; CONTEXT</text>
+
+      {/* Tool Runner / Execution Node (Bottom Right) */}
+      <rect x="170" y="82" width="90" height="34" rx="6" fill="#0B1B30" stroke="#F59E0B" strokeWidth="1.4" />
+      <circle cx="184" cy="99" r="4" fill="#F59E0B" />
+      <text x="194" y="97" fill="#FEF3C7" fontSize="7.5" fontFamily="monospace" fontWeight="bold">TOOL RUNNER</text>
+      <text x="194" y="107" fill="#FCD34D" fontSize="6.5" fontFamily="monospace">CALL: EXECUTE</text>
+
+      {/* Cyclic Feedback Edge: Tool Runner -> Supervisor */}
+      <path d="M215 82 C 215 50, 190 25, 180 25" fill="none" stroke="#34D399" strokeWidth="1.4" />
+      <polygon points="180,25 186,22 186,28" fill="#34D399" />
+
+      {/* Function Calling JSON Payload Preview (Bottom Center) */}
+      <rect x="50" y="124" width="160" height="26" rx="4" fill="#060D1A" stroke="#1E293B" strokeWidth="1" />
+      <text x="58" y="137" fill="#38BDF8" fontSize="6.5" fontFamily="monospace">{`tools: ["fetch_metrics", "execute"]`}</text>
+      <text x="58" y="145" fill="#94A3B8" fontSize="6" fontFamily="monospace">Structured Output &bull; Schema Validated</text>
+    </g>
+
+    {/* Title Block */}
+    <g transform="translate(170, 226)">
+      <rect x="0" y="0" width="160" height="38" rx="4" fill="#0C1B33" stroke="#1E3A8A" strokeWidth="1" />
+      <text x="10" y="15" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">AI LAB: LANGGRAPH ENGINE</text>
+      <text x="10" y="27" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">MULTI-AGENT &bull; SELF-HEALING</text>
+    </g>
+  </svg>
+);
+
+export const RagIntelligenceArt = () => (
+  <svg
+    viewBox="0 0 340 272"
+    className="gf-art w-full h-full"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Blueprint Dark Navy Background */}
+    <rect width="340" height="272" fill="#081120" />
+    <defs>
+      <pattern id="rag-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#12233E" strokeWidth="0.8" />
+      </pattern>
+    </defs>
+    <rect width="340" height="272" fill="url(#rag-grid)" />
+
+    {/* Top Header Engineering Features */}
+    <g strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 26 L80 26" stroke="#38BDF8" strokeWidth="2" />
+      <text x="18" y="19" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">SUPABASE_PGVECTOR</text>
+      <path d="M90 26 L150 26" stroke="#34D399" strokeWidth="1.8" />
+      <text x="94" y="19" fill="#34D399" fontSize="8" fontFamily="monospace" fontWeight="bold">HNSW_COSINE</text>
+
+      {/* Embedding Dimension Badge */}
+      <rect x="180" y="14" width="104" height="22" rx="4" fill="#0B1A32" stroke="#818CF8" strokeWidth="1.2" />
+      <text x="186" y="29" fill="#C7D2FE" fontSize="7.5" fontFamily="monospace" fontWeight="bold">EMBED: 3072-DIM</text>
+    </g>
+
+    {/* Center Ingestion Pipeline & Vector Scatter Plot */}
+    <g transform="translate(40, 60)">
+      {/* Step 1: Document Chunking */}
+      <rect x="0" y="15" width="60" height="40" rx="4" fill="#0C1B33" stroke="#38BDF8" strokeWidth="1.2" />
+      <text x="8" y="32" fill="#FFFFFF" fontSize="7.5" fontFamily="monospace" fontWeight="bold">PyMuPDF</text>
+      <text x="8" y="44" fill="#93C5FD" fontSize="6.5" fontFamily="monospace">PARSER</text>
+
+      <path d="M60 35 L85 35" stroke="#38BDF8" strokeWidth="1.4" />
+      <polygon points="85,35 80,32 80,38" fill="#38BDF8" />
+
+      {/* Step 2: Vector Space Coordinates */}
+      <g transform="translate(95, 0)">
+        <rect x="0" y="0" width="120" height="74" rx="6" fill="#08152A" stroke="#1E3A8A" strokeWidth="1.2" />
+        <circle cx="60" cy="37" r="28" fill="none" stroke="#2563EB" strokeWidth="0.8" strokeDasharray="2 2" />
+        
+        {/* Clustered Vector Points */}
+        <circle cx="45" cy="28" r="3" fill="#38BDF8" />
+        <circle cx="52" cy="24" r="2.5" fill="#38BDF8" />
+        <circle cx="48" cy="35" r="3.5" fill="#34D399" />
+        <circle cx="75" cy="48" r="2.5" fill="#F59E0B" />
+        <circle cx="82" cy="42" r="3" fill="#F59E0B" />
+        
+        {/* Nearest Neighbor Match Vector */}
+        <line x1="48" y1="35" x2="52" y2="24" stroke="#34D399" strokeWidth="1.4" />
+        <text x="10" y="66" fill="#34D399" fontSize="6.5" fontFamily="monospace">COSINE SIM: 0.942</text>
+      </g>
+
+      <path d="M215 35 L240 35" stroke="#38BDF8" strokeWidth="1.4" />
+      <polygon points="240,35 235,32 235,38" fill="#38BDF8" />
+
+      {/* Step 3: Grounded Context LLM Prompt */}
+      <g transform="translate(40, 88)">
+        <rect x="0" y="0" width="180" height="42" rx="5" fill="#0A182E" stroke="#10B981" strokeWidth="1.2" />
+        <text x="10" y="16" fill="#34D399" fontSize="7.5" fontFamily="monospace" fontWeight="bold">GROUNDED CITATION RETRIEVAL</text>
+        <text x="10" y="27" fill="#E2E8F0" fontSize="7" fontFamily="monospace">doc_id: 138-pg &bull; 275 chunks indexed</text>
+        <text x="10" y="37" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">Zero Hallucination &bull; RLS Multi-Tenant</text>
+      </g>
+    </g>
+
+    {/* Title Block */}
+    <g transform="translate(170, 226)">
+      <rect x="0" y="0" width="160" height="38" rx="4" fill="#0C1B33" stroke="#1E3A8A" strokeWidth="1" />
+      <text x="10" y="15" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">RAG LAB: HYBRID RETRIEVAL</text>
+      <text x="10" y="27" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">SUPABASE &bull; PGVECTOR HNSW</text>
+    </g>
+  </svg>
+);
+
+export const FullStackSaasArt = () => (
+  <svg
+    viewBox="0 0 340 272"
+    className="gf-art w-full h-full"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Blueprint Dark Navy Background */}
+    <rect width="340" height="272" fill="#081224" />
+    <defs>
+      <pattern id="saas-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#132442" strokeWidth="0.8" />
+      </pattern>
+    </defs>
+    <rect width="340" height="272" fill="url(#saas-grid)" />
+
+    {/* Top Header Engineering Features */}
+    <g strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 26 L80 26" stroke="#38BDF8" strokeWidth="2" />
+      <text x="18" y="19" fill="#38BDF8" fontSize="8" fontFamily="monospace" fontWeight="bold">NEXTJS_FASTAPI_APP</text>
+      <path d="M90 26 L150 26" stroke="#10B981" strokeWidth="1.8" />
+      <text x="94" y="19" fill="#34D399" fontSize="8" fontFamily="monospace" fontWeight="bold">POSTGRES_RLS</text>
+
+      {/* Latency Telemetry Badge */}
+      <rect x="180" y="14" width="104" height="22" rx="4" fill="#0B1A32" stroke="#38BDF8" strokeWidth="1.2" />
+      <text x="186" y="29" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">API LATENCY: 18ms</text>
+    </g>
+
+    {/* Center 3-Tier Full-Stack Architecture */}
+    <g transform="translate(40, 56)">
+      {/* Tier 1: Frontend Client (Next.js / React) */}
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="260" height="30" rx="5" fill="#0C1B33" stroke="#38BDF8" strokeWidth="1.2" />
+        <text x="12" y="19" fill="#FFFFFF" fontSize="8" fontFamily="monospace" fontWeight="bold">TIER 1: NEXT.JS / REACT CLIENT</text>
+        <text x="156" y="19" fill="#93C5FD" fontSize="7" fontFamily="monospace">TYPESCRIPT &bull; TAILWIND</text>
+      </g>
+
+      {/* Bus Connector 1 */}
+      <line x1="130" y1="30" x2="130" y2="44" stroke="#38BDF8" strokeWidth="1.6" strokeDasharray="2 2" />
+      <text x="136" y="40" fill="#60A5FA" fontSize="6.5" fontFamily="monospace">HTTPS / REST JSON</text>
+
+      {/* Tier 2: Async Backend Router (FastAPI / Python) */}
+      <g transform="translate(0, 44)">
+        <rect x="0" y="0" width="260" height="34" rx="5" fill="#0A182E" stroke="#10B981" strokeWidth="1.2" />
+        <text x="12" y="18" fill="#34D399" fontSize="8" fontFamily="monospace" fontWeight="bold">TIER 2: FASTAPI ASYNC BACKEND</text>
+        <text x="12" y="28" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">PYDANTIC V2 &bull; JWT AUTH &bull; ASYNC WORKERS</text>
+      </g>
+
+      {/* Bus Connector 2 */}
+      <line x1="130" y1="78" x2="130" y2="92" stroke="#10B981" strokeWidth="1.6" strokeDasharray="2 2" />
+      <text x="136" y="88" fill="#34D399" fontSize="6.5" fontFamily="monospace">SQL POOL &bull; TLS</text>
+
+      {/* Tier 3: Database & Security (PostgreSQL / Supabase RLS) */}
+      <g transform="translate(0, 92)">
+        <rect x="0" y="0" width="260" height="38" rx="5" fill="#081426" stroke="#818CF8" strokeWidth="1.2" />
+        <text x="12" y="18" fill="#A5B4FC" fontSize="8" fontFamily="monospace" fontWeight="bold">TIER 3: POSTGRESQL & SUPABASE RLS</text>
+        <text x="12" y="30" fill="#E2E8F0" fontSize="6.5" fontFamily="monospace">ROW LEVEL SECURITY &bull; N8N WORKFLOW AUTOMATION</text>
+      </g>
+    </g>
+
+    {/* Title Block */}
+    <g transform="translate(170, 226)">
+      <rect x="0" y="0" width="160" height="38" rx="4" fill="#0C1B33" stroke="#1E3A8A" strokeWidth="1" />
+      <text x="10" y="15" fill="#38BDF8" fontSize="7.5" fontFamily="monospace" fontWeight="bold">SAAS LAB: FULL-STACK PROD</text>
+      <text x="10" y="27" fill="#94A3B8" fontSize="6.5" fontFamily="monospace">FASTAPI &bull; NEXTJS &bull; POSTGRES</text>
+    </g>
+  </svg>
+);
+
 export const ART_COMPONENTS = {
   schematic: SchematicArt,
   pcb: PcbTracesArt,
@@ -703,6 +923,9 @@ export const ART_COMPONENTS = {
   robotics: RoboticsArt,
   mechanical: MechanicalCadArt,
   automation: AutomationArt,
+  agentic: AgenticAiArt,
+  rag: RagIntelligenceArt,
+  fullstack: FullStackSaasArt,
   manufacturing: ManufacturingSmtArt,
 };
 
@@ -715,6 +938,9 @@ export const ENGINEERING_ARTS = {
   robotics: <RoboticsArt />,
   mechanical: <MechanicalCadArt />,
   automation: <AutomationArt />,
+  agentic: <AgenticAiArt />,
+  rag: <RagIntelligenceArt />,
+  fullstack: <FullStackSaasArt />,
   manufacturing: <ManufacturingSmtArt />,
 };
 

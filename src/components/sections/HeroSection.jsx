@@ -14,7 +14,9 @@ export default function HeroSection() {
     "Antenna & RF Engineering",
     "Deterministic Firmware",
     "Robotics & Intelligent Systems",
-    "Industry 4.0 & Automation",
+    "Agentic AI & Multi-Agent",
+    "Enterprise RAG Systems",
+    "Full-Stack AI SaaS",
     "Turnkey Production"
   ];
 
@@ -76,7 +78,7 @@ export default function HeroSection() {
             </div>
 
             <div className="hidden sm:flex items-center gap-4 text-slate-500">
-              <span>STANDARDS: IPC-A-610 CLASS 3</span>
+              <span>STANDARDS: IPC-A-610 CLASS 3 &bull; AGENTIC AI & EMBEDDED LABS</span>
               <span className="text-slate-300">|</span>
               <span className="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">
                 ACTIVE LAB CAPACITY
@@ -98,7 +100,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider font-semibold bg-white border border-slate-200 text-slate-800 mb-4 sm:mb-5 shadow-sm"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-900"></span>
-                <span>Founder-Led Electronics Engineering</span>
+                <span>Founder-Led Hardware & AI Engineering</span>
               </motion.div>
 
               {/* Kinetic Words Pull-Up Headline */}
@@ -130,7 +132,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-xl mb-5 sm:mb-6 font-normal"
               >
-                We design, develop and deliver advanced engineering solutions across electronics, embedded systems, RF, robotics and industrial automation.
+                We design, develop and deliver advanced engineering solutions across electronics, embedded systems, RF, robotics, industrial automation, and enterprise agentic AI systems.
               </motion.p>
 
               {/* Capability Tag Cloud */}
