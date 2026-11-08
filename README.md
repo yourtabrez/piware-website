@@ -595,7 +595,7 @@ Below is the complete chronological log of engineering enhancements and transfor
   - Created [`public/sitemap.xml`](file:///f:/Owais/piware-website/public/sitemap.xml) mapping the homepage and all core section anchors (`#capabilities`, `#lifecycle`, `#process`, `#stack`, `#industries`, `#why-us`, `#contact`) with priorities and update timestamps.
   - Implemented authoritative self-referencing canonical URL (`<link rel="canonical" href="https://www.piware.in/">`) preventing duplicate content splitting across Vercel deployment URLs.
 - **Metadata & Head Tag Optimization ([`index.html`](file:///f:/Owais/piware-website/index.html))**:
-  - Upgraded title to high-CTR commercial format: `Piware Engineering — Embedded Systems, Hardware & Agentic AI Studio`.
+  - Upgraded title to high-CTR commercial format: `Piware Engineering | Embedded Systems, Hardware & Agentic AI Studio`.
   - Optimized meta description to exactly fit Google SERP pixel limits: *"From idea to shipped hardware without guesswork. We architect, prototype, and manufacture advanced electronics, embedded systems, RF, robotics & agentic AI software."*
   - Added commercial meta keywords, author, publisher, and strict indexing directives (`max-image-preview:large, max-snippet:-1`).
   - Added local geographic SEO coordinates for Ahmedabad studio (`geo.region: IN-GJ`, `geo.placename: Ahmedabad`, `geo.position: 23.0225;72.5714`, `ICBM`).
